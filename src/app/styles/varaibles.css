@@ -1,0 +1,26 @@
+:root {
+  --color-black: 0, 0, 0;
+  --color-white: 255, 255, 255;
+  --color-accent: 69, 63, 120;
+  --color-primary: 114, 114, 114;
+  --color-secondary: 39, 39, 39;
+
+  --transition: 0.2s ease-in-out;
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root {
+  }
+}
+
+/* Small devices (mobile phones) */
+@media (max-width: 767px) {
+  :root {
+  }
+}
+
+@media (max-width: 440px) {
+  :root {
+  }
+}
