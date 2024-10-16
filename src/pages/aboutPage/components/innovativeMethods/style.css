@@ -1,0 +1,10 @@
+.innovative-methods-container h1 {
+    color: rgba(var(--color-black), 1);
+    font-size: var(--font-h1-size);
+    line-height: var(--font-h1-line-height);
+    margin: 4vh 0;
+}
+
+.innovative-methods-container hr {
+    width: 100%;
+}
