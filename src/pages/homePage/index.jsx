@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import "./style.css";
+import './style.css'
+import Contacts from '../../shared/widgets/contacts/ui/contacts'
 
 export const HomePage = () => {
   useEffect(() => {
@@ -20,10 +21,102 @@ export const HomePage = () => {
   }, [])
   return (
     <main className="main-content">
-    {/*  Hero section*/}
-    {/*  ReasonsToContact section*/}
-    {/*  Services section global*/}
-    {/*  Contacts section global*/}
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, atque
+        neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
+        blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
+      </p>
+
+      <Contacts></Contacts>
+      {/*  Hero section*/}
+      {/*  ReasonsToContact section*/}
+      {/*  Services section global*/}
+      {/*  Contacts section global*/}
     </main>
   )
 }
