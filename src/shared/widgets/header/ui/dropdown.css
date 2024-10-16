@@ -15,9 +15,8 @@
 }
 
 .dropdown-menu-list-item:hover {
-  background: gray;
   cursor: pointer;
-  color: #fff;
+  color: rgb(var(--color-secondary));
 }
 
 .dropdown-menu {

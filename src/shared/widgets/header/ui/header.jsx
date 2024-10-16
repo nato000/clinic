@@ -24,7 +24,7 @@ export const Header = () => {
     setDropdownVisible(false)
   }
 
-  const [isDropdownMobileVisible, setDropdownMobileVisible] = useState(false)
+  const [isDropdownMobileVisible, setDropdownMobileVisible] = useState(true)
 
   const handleDropdownMobileToggle = () => {
     setDropdownMobileVisible((prevVisible) => !prevVisible)

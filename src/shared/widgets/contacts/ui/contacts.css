@@ -1,0 +1,116 @@
+.contacts {
+  background-color: rgb(var(--color-secondary));
+  width: 290px;
+  padding: 30px 40px;
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+}
+
+.contacts__title {
+  color: rgb(var(--color-white));
+  font-size: 36px;
+  margin: 0;
+}
+
+.contacts__content {
+  padding: 0 5px;
+}
+
+.contacts-content__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px 0;
+  padding: 0;
+}
+
+.contacts-content-list__item {
+  --size: 20px;
+}
+
+.contacts-content-list-item__link {
+  color: rgb(var(--color-white));
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: var(--transition);
+}
+
+.contacts-content-list-item__link:hover {
+  color: rgb(var(--color-primary));
+}
+
+.contacts-content-list-item__icon {
+  width: var(--size);
+  display: inline-block;
+}
+
+.contacts__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 0 0 0;
+}
+
+.contacts-footer__appointment {
+  color: rgb(var(--color-white));
+  font-size: 15px;
+  padding: 15px 10px;
+  background-color: transparent;
+  border: 1px solid rgb(var(--color-white));
+  transition: var(--transition);
+}
+
+.contacts-footer__appointment:hover {
+  color: rgb(var(--color-secondary));
+
+  background-color: rgb(var(--color-white));
+  border: 1px solid rgb(var(--color-secondary));
+}
+
+.contacts-footer__links {
+  --size: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.contacts-footer-links__link {
+}
+
+.contacts-footer-links-link__icon {
+  display: inline-block;
+  width: var(--size);
+  filter: invert(100%);
+  transition: var(--transition);
+}
+
+.contacts-footer-links-link__icon:hover {
+  filter: invert(50%);
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 500px) {
+  .contacts {
+    background-color: rgb(var(--color-secondary));
+    width: calc(100% - 80px);
+    padding: 30px 40px;
+    position: relative;
+    bottom: -100%;
+    left: 0px;
+    /* transform: translate(-0%, -50%); */
+  }
+}
+@media (max-width: 360px) {
+  .contacts {
+    width: calc(100% - 20px);
+
+    padding: 10px 10px;
+  }
+}

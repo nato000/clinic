@@ -28,6 +28,15 @@
       }
     }
   },
+  "contacts": {
+    "title": "Наші контакти",
+    "phone": "38 073 408 06 46",
+    "mail": "klinicaniskhodovskogo@gmail.com",
+    "adress": {
+      "link": "https://maps.app.goo.gl/d3NoicV3SRrE5og59",
+      "text": "вулиця Саперне Поле, 3, Київ, 01042"
+    }
+  },
   "footer": {
     "copyriting": "Copyright © 2024 | Dr. Niskhodovskiy. All Rights Reserved."
   }

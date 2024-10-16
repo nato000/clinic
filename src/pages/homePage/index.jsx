@@ -111,8 +111,10 @@ export const HomePage = () => {
         neque ipsam officia cum sapiente ipsa delectus impedit illo modi, sint
         blanditiis laborum quos saepe quibusdam. Sed esse iste architecto!
       </p>
-
-      <Contacts></Contacts>
+      <section className="map-section">
+        <div className="map"></div>
+        <Contacts />
+      </section>
       {/*  Hero section*/}
       {/*  ReasonsToContact section*/}
       {/*  Services section global*/}
