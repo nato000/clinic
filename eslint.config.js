@@ -8,6 +8,7 @@ export default [
   { ignores: ['dist'] },
   {
     files: ['**/*.{js,jsx}'],
+    extends: ["react-app"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,

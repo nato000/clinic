@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import HomePage from '../../pages/homePage/ui/homePage'
 import Layout from '../layout/layout'
+import HomePage from '../../pages/homePage'
 
 export default function AppRouter() {
   return (
