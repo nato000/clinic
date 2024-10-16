@@ -6,6 +6,13 @@
   --color-secondary: 39, 39, 39;
 
   --transition: 0.2s ease-in-out;
+
+  --font-h1-size: 2em;
+  --font-h1-line-height: 36px;
+  --font-h2-size: 0.8em;
+  --font-h2-line-height: 12px;
+  --font-p-size: 1.1em;
+  --font-p-line-height: 18px;
 }
 
 /* Medium devices (tablets) */

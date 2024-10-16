@@ -1,5 +1,4 @@
 import './footer.css'
-import uaText from '../../../../text/ua-text.json'
 
 export const Footer = () => {
   return (
@@ -7,7 +6,7 @@ export const Footer = () => {
       <footer className="footer">
         <div className="container">
           <div className="footer-wrapper">
-            <p className="footer__copyriting">{uaText.footer.copyriting}</p>
+            <p className="footer__copyriting">{}</p>
           </div>
         </div>
       </footer>

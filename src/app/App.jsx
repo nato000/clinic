@@ -8,8 +8,9 @@ function App() {
   useEffect(() => {
     setLanguage("ua");
   }, [])
+
   return (
-   <>
+    <>
       <AppRouter />
     </>
   );
