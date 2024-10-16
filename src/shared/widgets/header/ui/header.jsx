@@ -1,5 +1,4 @@
 import './header.css'
-
 import { translate } from '../../../utils/translator'
 import { useState } from 'react'
 import logo from '../../../assets/images/Niskhodovski-2.png'
@@ -90,7 +89,7 @@ export const Header = () => {
                           href="#"
                           className="header-bottom-nav-list-item__link"
                         >
-                          {translate('header.bottom.nav.option2')}
+                          {translate('header.bottom.nav.option2.title')}
                         </a>
                         {isDropdownVisible && <DropdownMenu />}
                       </div>
@@ -127,7 +126,7 @@ export const Header = () => {
                           href="#"
                           className="header-bottom-nav-list-item__link"
                         >
-                          {translate('header.bottom.nav.option2')}
+                          {translate('header.bottom.nav.option2.title')}
                         </a>
                         {isDropdownMobileVisible && <DropdownMenu />}
                       </div>

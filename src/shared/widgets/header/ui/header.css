@@ -94,8 +94,8 @@
   overflow: hidden;
   transition: var(--transition);
   height: 0px;
-  padding: 0 var(--header-bottom-mobile-padding)
-    var(--header-bottom-mobile-padding) var(--header-bottom-mobile-padding);
+  padding: 0 var(--header-bottom-mobile-padding) 0
+    var(--header-bottom-mobile-padding);
   justify-content: space-between;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .header-bottom-nav-list-item__link {
-  padding: 5px;
+  padding: 5px 10px;
   text-decoration: none;
   color: rgb(var(--color-black));
   font-weight: 700;
