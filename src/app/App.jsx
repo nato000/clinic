@@ -1,8 +1,13 @@
 import './styles/App.css';
-import { BrowserRouter as Router} from 'react-router-dom';
 import AppRouter from './routes/appRouter';
+import { useEffect } from 'react'
+import { setLanguage } from '../shared/utils/translator'
 
 function App() {
+
+  useEffect(() => {
+    setLanguage("ua");
+  }, [])
   return (
    <>
       <AppRouter />
