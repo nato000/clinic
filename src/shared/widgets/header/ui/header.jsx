@@ -1,6 +1,5 @@
 import './header.css'
 
-import uaText from '../../../../text/ua-text.json'
 import { translate } from '../../../utils/translator'
 import { useState } from 'react'
 import logo from '../../../assets/images/Niskhodovski-2.png'
@@ -42,13 +41,13 @@ export const Header = () => {
               </a>
               <div className="header-top-socials">
                 <a
-                  href={`tel:+${uaText.header.top.tel}`}
+                  href={`tel:+${translate('header.top.tel')}`}
                   className="header-top__tel"
                 >
                   {translate('header.top.tel')}
                 </a>
                 <button className="header-top__lang">
-                  {uaText.header.top.lang}
+                  {translate('header.top.lang')}
                 </button>
                 <a href={instagramIcon} className="header-top__inst">
                   <img
@@ -78,7 +77,7 @@ export const Header = () => {
                   <ul className="header-bottom-nav__list">
                     <li className="header-bottom-nav-list__item">
                       <a href="#" className="header-bottom-nav-list-item__link">
-                        {uaText.header.bottom.nav.option1}
+                        {translate('header.bottom.nav.option1')}
                       </a>
                     </li>
                     <li className="header-bottom-nav-list__item">
@@ -91,20 +90,20 @@ export const Header = () => {
                           href="#"
                           className="header-bottom-nav-list-item__link"
                         >
-                          {uaText.header.bottom.nav.option2}
+                          {translate('header.bottom.nav.option2')}
                         </a>
                         {isDropdownVisible && <DropdownMenu />}
                       </div>
                     </li>
                     <li className="header-bottom-nav-list__item">
                       <a href="#" className="header-bottom-nav-list-item__link">
-                        {uaText.header.bottom.nav.option3}
+                        {translate('header.bottom.nav.option3')}
                       </a>
                     </li>
                   </ul>
                 </nav>
                 <button className="header-bottom__appointment">
-                  {uaText.header.bottom.appointment}
+                  {translate('header.bottom.appointment')}
                 </button>
               </div>
               <div
@@ -116,7 +115,7 @@ export const Header = () => {
                   <ul className="header-bottom-nav__list">
                     <li className="header-bottom-nav-list__item">
                       <a href="#" className="header-bottom-nav-list-item__link">
-                        {uaText.header.bottom.nav.option1}
+                        {translate('header.bottom.nav.option1')}
                       </a>
                     </li>
                     <li className="header-bottom-nav-list__item">
@@ -128,35 +127,31 @@ export const Header = () => {
                           href="#"
                           className="header-bottom-nav-list-item__link"
                         >
-                          {uaText.header.bottom.nav.option2}
+                          {translate('header.bottom.nav.option2')}
                         </a>
                         {isDropdownMobileVisible && <DropdownMenu />}
                       </div>
                     </li>
                     <li className="header-bottom-nav-list__item">
                       <a href="#" className="header-bottom-nav-list-item__link">
-                        {uaText.header.bottom.nav.option3}
+                        {translate('header.bottom.nav.option3')}
                       </a>
                     </li>
-                    <li className="header-bottom-nav-list__item"></li>
-                    <li className="header-bottom-nav-list__item"></li>
-                    <li className="header-bottom-nav-list__item"></li>
-                    <li className="header-bottom-nav-list__item"></li>
                   </ul>
                 </nav>
                 <div className="header-bottom__appointment-section-wrapper">
                   <div className="header-bottom__appointment-section">
                     <button className="header-top__lang">
-                      {uaText.header.top.lang}
+                      {translate('header.top.lang')}
                     </button>
                     <a
-                      href={`tel:+${uaText.header.top.tel}`}
+                      href={`tel:+${translate('header.top.tel')}`}
                       className="header-top__tel"
                     >
                       {translate('header.top.tel')}
                     </a>
                     <a
-                      href={`${uaText.header.top.inst}`}
+                      href={`${translate('header.top.inst')}`}
                       className="header-top__inst"
                     >
                       <img
@@ -166,7 +161,7 @@ export const Header = () => {
                       />
                     </a>
                     <a
-                      href={`${uaText.header.top.tg}`}
+                      href={`${translate('header.top.tg')}`}
                       className="header-top__tg"
                     >
                       <img
@@ -177,7 +172,7 @@ export const Header = () => {
                     </a>
                   </div>
                   <button className="header-bottom__appointment">
-                    {uaText.header.bottom.appointment}
+                    {translate('header.bottom.appointment')}
                   </button>
                 </div>
               </div>
