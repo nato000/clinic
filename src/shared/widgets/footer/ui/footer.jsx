@@ -1,5 +1,5 @@
 import './footer.css'
-import uaText from '../../../text/ua-text.json'
+import uaText from '../../../../text/ua-text.json'
 
 export const Footer = () => {
   return (

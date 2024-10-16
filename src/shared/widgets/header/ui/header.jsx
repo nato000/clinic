@@ -1,5 +1,5 @@
 import './header.css'
-import uaText from '../../../text/ua-text.json'
+import uaText from '../../../../text/ua-text.json'
 
 export const Header = () => {
   return (

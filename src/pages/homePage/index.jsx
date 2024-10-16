@@ -1,7 +1,5 @@
-import { Header } from '../../../widgets/header'
-import './homePage.css'
-import { Footer } from '../../../widgets/footer'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
+import "./style.css";
 
 export const HomePage = () => {
   useEffect(() => {
@@ -21,13 +19,12 @@ export const HomePage = () => {
     return () => window.removeEventListener('hashchange', handleHashChange) // Cleanup listener on unmount
   }, [])
   return (
-    <>
-      <Header />
-      <main className="main-content">
-   
-      </main>
-      <Footer />
-    </>
+    <main className="main-content">
+    {/*  Hero section*/}
+    {/*  ReasonsToContact section*/}
+    {/*  Services section global*/}
+    {/*  Contacts section global*/}
+    </main>
   )
 }
 

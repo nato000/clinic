@@ -1,10 +1,10 @@
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import HomePage from '../../pages/homePage/ui/homePage'
 import Layout from '../layout/layout'
 
 export default function AppRouter() {
   return (
-    <>
+      <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -14,6 +14,6 @@ export default function AppRouter() {
           </Route> */}
         </Route>
       </Routes>
-    </>
+      </Router>
   )
 }
