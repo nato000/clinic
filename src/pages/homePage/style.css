@@ -26,6 +26,7 @@
   color: rgb(var(--color-white));
   font-size: 19px;
   max-width: 285px;
+  font-weight: 300;
 }
 
 .hero__appointment {
