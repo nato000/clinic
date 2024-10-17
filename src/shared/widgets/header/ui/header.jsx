@@ -10,6 +10,7 @@ import instagramIcon from '../../../assets/icons/instagramIcon.svg'
 import telegramIcon from '../../../assets/icons/telegramIcon.svg'
 import DropdownMenu from './dropdown'
 import AppointmentBtn from '../../appointment/ui/appointmentBtn'
+import { Link } from 'react-router-dom'
 
 export const Header = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
@@ -92,33 +93,36 @@ export const Header = () => {
         <div className="container">
           <div className="header-wrapper">
             <div className="header__top">
-              <a href="#" className="header-top__logo">
+              <Link className="header-top__logo" to={"/"}>
                 <img src={logo} alt="logo" className="logo" />
-              </a>
+              </Link>
+              <div className="appointment-btn-container">
+                <AppointmentBtn />
+              </div>
               <div className="header-top-socials">
-                <a
-                  href={`tel:+${translate('header.top.tel')}`}
+                <Link
+                  to={`tel:+${translate('header.top.tel')}`}
                   className="header-top__tel"
                 >
                   {translate('header.top.tel')}
-                </a>
+                </Link>
                 <button className="header-top__lang" onClick={toggleLanguage}>
                   {language === 'ua' ? 'UA' : 'EN'}
                 </button>
-                <a href={instagramIcon} className="header-top__inst">
+                <Link to={translate("header.top.inst")} className="header-top__inst">
                   <img
                     src={instagramIcon}
                     alt="instagram"
                     className="header-top-inst__img"
                   />
-                </a>
-                <a href={telegramIcon} className="header-top__tg">
+                </Link>
+                <Link to={translate("header.top.tg")} className="header-top__tg">
                   <img
                     src={telegramIcon}
                     alt="telegram"
                     className="header-top-telegram__img"
                   />
-                </a>
+                </Link>
               </div>
               <button
                 className="header-top__burger-menu"
@@ -135,9 +139,9 @@ export const Header = () => {
                 <nav className="header-bottom__nav">
                   <ul className="header-bottom-nav__list">
                     <li className="header-bottom-nav-list__item">
-                      <a href="#" className="header-bottom-nav-list-item__link">
+                      <Link to="/about" className="header-bottom-nav-list-item__link">
                         {translate('header.bottom.nav.option1')}
-                      </a>
+                      </Link>
                     </li>
                     <li className="header-bottom-nav-list__item">
                       <div
@@ -145,19 +149,19 @@ export const Header = () => {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                       >
-                        <a
-                          href="#"
+                        <Link
+                          to="/services"
                           className="header-bottom-nav-list-item__link"
                         >
                           {translate('header.bottom.nav.option2.title')}
-                        </a>
+                        </Link>
                         {isDropdownVisible && <DropdownMenu />}
                       </div>
                     </li>
                     <li className="header-bottom-nav-list__item">
-                      <a href="#" className="header-bottom-nav-list-item__link">
+                      <Link to="/pricelist" className="header-bottom-nav-list-item__link">
                         {translate('header.bottom.nav.option3')}
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -172,28 +176,28 @@ export const Header = () => {
                 <nav className="header-bottom__nav">
                   <ul className="header-bottom-nav__list">
                     <li className="header-bottom-nav-list__item">
-                      <a href="#" className="header-bottom-nav-list-item__link">
+                      <Link to="/about" className="header-bottom-nav-list-item__link">
                         {translate('header.bottom.nav.option1')}
-                      </a>
+                      </Link>
                     </li>
                     <li className="header-bottom-nav-list__item">
                       <div
                         className="header-bottom-nav-list__item-menu"
                         onClick={handleDropdownMobileToggle} // Change to click-based toggle
                       >
-                        <a
-                          href="#"
+                        <Link
+                          to="/services"
                           className="header-bottom-nav-list-item__link"
                         >
                           {translate('header.bottom.nav.option2.title')}
-                        </a>
+                        </Link>
                         {isDropdownMobileVisible && <DropdownMenu />}
                       </div>
                     </li>
                     <li className="header-bottom-nav-list__item">
-                      <a href="#" className="header-bottom-nav-list-item__link">
+                      <Link to="pricelist" className="header-bottom-nav-list-item__link">
                         {translate('header.bottom.nav.option3')}
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -202,14 +206,14 @@ export const Header = () => {
                     <button className="header-top__lang">
                       {translate('header.top.lang')}
                     </button>
-                    <a
-                      href={`tel:+${translate('header.top.tel')}`}
+                    <Link
+                      to={`tel:+${translate('header.top.tel')}`}
                       className="header-top__tel"
                     >
                       {translate('header.top.tel')}
-                    </a>
-                    <a
-                      href={`${translate('header.top.inst')}`}
+                    </Link>
+                    <Link
+                      to={`${translate('header.top.inst')}`}
                       className="header-top__inst"
                     >
                       <img
@@ -217,9 +221,9 @@ export const Header = () => {
                         alt="instagram"
                         className="header-top-inst__img"
                       />
-                    </a>
-                    <a
-                      href={`${translate('header.top.tg')}`}
+                    </Link>
+                    <Link
+                      to={`${translate('header.top.tg')}`}
                       className="header-top__tg"
                     >
                       <img
@@ -227,9 +231,8 @@ export const Header = () => {
                         alt="telegram"
                         className="header-top-telegram__img"
                       />
-                    </a>
+                    </Link>
                   </div>
-
                   <AppointmentBtn />
                 </div>
               </div>
@@ -240,5 +243,3 @@ export const Header = () => {
     </>
   )
 }
-
-export default Header
