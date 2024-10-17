@@ -120,6 +120,7 @@
 .header-bottom-desktop {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-bottom-mobile {
@@ -161,7 +162,7 @@
   line-height: 17px;
 }
 
-.header-bottom__appointment {
+/* .header-bottom__appointment {
   margin-left: auto;
   padding: 16px;
   font-size: 16px;
@@ -173,7 +174,7 @@
 .header-bottom__appointment:hover {
   background-color: rgb(var(--color-black));
   color: rgb(var(--color-white));
-}
+} */
 
 .header-bottom__appointment-section-wrapper {
   box-shadow: 0 0 2px 2px rgba(var(--color-black), 0.5);

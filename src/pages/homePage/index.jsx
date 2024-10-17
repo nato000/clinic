@@ -4,6 +4,7 @@ import Contacts from '../../shared/widgets/contacts/ui/contacts'
 import { translate } from '../../shared/utils/translator'
 import Heading from '../../shared/widgets/heading/ui/heading'
 import Services from '../../shared/widgets/services/ui/services'
+import AppointmentBtn from '../../shared/widgets/appointment/ui/appointmentBtn'
 
 export const HomePage = () => {
   useEffect(() => {
@@ -31,9 +32,7 @@ export const HomePage = () => {
             <p className="hero__description">
               {translate('homePage.hero.description')}
             </p>
-            <button className="hero__appointment">
-              {translate('homePage.hero.appointmen')}
-            </button>
+            <AppointmentBtn />
           </div>
         </div>
       </section>
@@ -86,7 +85,9 @@ export const HomePage = () => {
       <Services />
       <section className="map-section">
         <div className="map"></div>
-        <Contacts />
+        <div className="container contacts-container">
+          <Contacts />
+        </div>
       </section>
       {/*  Hero section*/}
       {/*  ReasonsToContact section*/}
