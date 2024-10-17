@@ -1,0 +1,25 @@
+.heading {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 36px;
+  padding: 30px 20px 27px 60px;
+  margin: 0 0 40px 0;
+  position: relative;
+}
+.heading::after {
+  content: '';
+  position: absolute;
+  width: 156px;
+  height: 2px;
+  background-color: rgb(var(--color-primary));
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .heading {
+    font-size: 28px;
+
+    padding: 30px 0;
+  }
+}

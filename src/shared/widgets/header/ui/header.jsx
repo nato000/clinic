@@ -1,7 +1,6 @@
 import './header.css'
-
 import { translate } from '../../../utils/translator'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from '../../../assets/images/Niskhodovski-2.png'
 import instagramIcon from '../../../assets/icons/instagramIcon.svg'
 import telegramIcon from '../../../assets/icons/telegramIcon.svg'
@@ -9,9 +8,11 @@ import DropdownMenu from './dropdown'
 
 export const Header = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
+  const [isHamburgerActive, setIsHamburgerActive] = useState(false)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuActive((prevState) => !prevState)
+    setIsHamburgerActive((prevState) => !prevState) // Toggle hamburger state
   }
 
   const [isDropdownVisible, setDropdownVisible] = useState(false)
@@ -24,11 +25,53 @@ export const Header = () => {
     setDropdownVisible(false)
   }
 
-  const [isDropdownMobileVisible, setDropdownMobileVisible] = useState(false)
+  const [isDropdownMobileVisible, setDropdownMobileVisible] = useState(true)
 
   const handleDropdownMobileToggle = () => {
     setDropdownMobileVisible((prevVisible) => !prevVisible)
   }
+
+  useEffect(() => {
+    if (isHamburgerActive) {
+      // Logic to animate the bars when the hamburger menu is active
+      const McBar1 = document.querySelector(
+        '.header-top__burger-menu b:nth-child(1)'
+      )
+      const McBar2 = document.querySelector(
+        '.header-top__burger-menu b:nth-child(2)'
+      )
+      const McBar3 = document.querySelector(
+        '.header-top__burger-menu b:nth-child(3)'
+      )
+
+      if (McBar1 && McBar2 && McBar3) {
+        McBar1.style.top = '50%'
+        McBar1.style.transform = 'rotate(45deg)'
+        McBar3.style.top = '50%'
+        McBar3.style.transform = 'rotate(-45deg)'
+        McBar2.style.opacity = '0' // Hide the middle bar
+      }
+    } else {
+      // Reset the bars to the original position when not active
+      const McBar1 = document.querySelector(
+        '.header-top__burger-menu b:nth-child(1)'
+      )
+      const McBar2 = document.querySelector(
+        '.header-top__burger-menu b:nth-child(2)'
+      )
+      const McBar3 = document.querySelector(
+        '.header-top__burger-menu b:nth-child(3)'
+      )
+
+      if (McBar1 && McBar2 && McBar3) {
+        McBar1.style.top = '0'
+        McBar1.style.transform = 'rotate(0deg)'
+        McBar3.style.top = '100%'
+        McBar3.style.transform = 'rotate(0deg)'
+        McBar2.style.opacity = '1' // Show the middle bar
+      }
+    }
+  }, [isHamburgerActive])
 
   return (
     <>
@@ -66,9 +109,12 @@ export const Header = () => {
               </div>
               <button
                 className="header-top__burger-menu"
+                data="hamburger-menu"
                 onClick={toggleMobileMenu}
               >
-                burger
+                <b></b>
+                <b></b>
+                <b></b>
               </button>
             </div>
             <div className="header__bottom">
@@ -90,7 +136,7 @@ export const Header = () => {
                           href="#"
                           className="header-bottom-nav-list-item__link"
                         >
-                          {translate('header.bottom.nav.option2')}
+                          {translate('header.bottom.nav.option2.title')}
                         </a>
                         {isDropdownVisible && <DropdownMenu />}
                       </div>
@@ -127,7 +173,7 @@ export const Header = () => {
                           href="#"
                           className="header-bottom-nav-list-item__link"
                         >
-                          {translate('header.bottom.nav.option2')}
+                          {translate('header.bottom.nav.option2.title')}
                         </a>
                         {isDropdownMobileVisible && <DropdownMenu />}
                       </div>
