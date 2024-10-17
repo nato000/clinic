@@ -1,0 +1,49 @@
+.description-wrapper {
+    display: flex;
+    justify-content: end;
+}
+
+.description-column {
+    width: 50%;
+}
+
+.services-description-section .symptoms-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.services-description-section .symptoms-container .symptom-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.services-description-section .symptoms-container .symptom-item .dot {
+    background-color: rgb(var(--color-black));
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    margin-right: 12px;
+}
+
+/*.services-description-section .symptoms-container .symptom-item p {*/
+/*    margin-left: auto;*/
+/*}*/
+
+
+@media (max-width: 992px) {
+    .services-description-section .symptoms-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .description-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-description-section .symptoms-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
