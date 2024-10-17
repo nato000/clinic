@@ -86,7 +86,14 @@ const CustomAccordion = ({ panels }) => {
                       className="custom-accordion-item"
                     >
                       <span>{item[0]}</span>
-                      <span className="custom-accordion-value">{item[1]}</span>
+                      <span className="custom-accordion-value">
+                        {item[1].split('\n').map((line, index) => (
+                          <React.Fragment key={index}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        ))}
+                      </span>
                     </Typography>
                   )
                 }
@@ -96,7 +103,12 @@ const CustomAccordion = ({ panels }) => {
                     paragraph
                     className="custom-accordion-item"
                   >
-                    {item}
+                    {item.split('\n').map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
                   </Typography>
                 )
               })

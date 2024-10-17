@@ -25,31 +25,6 @@ export const HomePage = () => {
     return () => window.removeEventListener('hashchange', handleHashChange) // Cleanup listener on unmount
   }, [])
 
-  const accordionData = [
-    {
-      title: 'Collapsible Group Item #1',
-      content: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      ],
-    },
-    {
-      title: 'Collapsible Group Item #2',
-      content: [
-        ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '100'],
-        ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '100'],
-        ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '100'],
-      ],
-    },
-    {
-      title: 'Collapsible Group Item #3',
-      content:
-        'Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.',
-    },
-  ]
-
   return (
     <main className="main-content">
       <section className="hero">
@@ -107,9 +82,6 @@ export const HomePage = () => {
               </div>
             </li>
           </ul>
-        </div>
-        <div>
-          <CustomAccordion panels={accordionData} />
         </div>
       </section>
       <Services />
