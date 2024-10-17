@@ -10,7 +10,6 @@ import Heading from '../../heading/ui/heading'
 import { translate } from '../../../utils/translator'
 
 export const Services = () => {
-  const style = 'color: rgb(var(--color-white))'
   return (
     <section className="services">
       <div className="container services-container">
@@ -26,51 +25,63 @@ export const Services = () => {
         </div>
         <div className="services-right">
           <a href="" className="services-right__service">
-            <img
-              src={likuvnya}
-              className="services-right-service__icon"
-              alt={translate('services.services.option1')}
-            />
+            <div className="services-right-service__icon-wrapper">
+              <img
+                src={likuvnya}
+                className="services-right-service__icon"
+                alt={translate('services.services.option1')}
+              />
+            </div>
             {translate('services.services.option1')}
           </a>
           <a href="" className="services-right__service">
-            <img
-              src={protez}
-              className="services-right-service__icon"
-              alt={translate('services.services.option2')}
-            />
+            <div className="services-right-service__icon-wrapper">
+              <img
+                src={protez}
+                className="services-right-service__icon"
+                alt={translate('services.services.option2')}
+              />
+            </div>
             {translate('services.services.option2')}
           </a>
           <a href="" className="services-right__service">
-            <img
-              src={hirurgia}
-              className="services-right-service__icon"
-              alt={translate('services.services.option3')}
-            />
+            <div className="services-right-service__icon-wrapper">
+              <img
+                src={hirurgia}
+                className="services-right-service__icon"
+                alt={translate('services.services.option3')}
+              />
+            </div>
             {translate('services.services.option3')}
           </a>
           <a href="" className="services-right__service">
-            <img
-              src={implantacia}
-              className="services-right-service__icon"
-              alt={translate('services.services.option4')}
-            />
+            <div className="services-right-service__icon-wrapper">
+              <img
+                src={implantacia}
+                className="services-right-service__icon"
+                alt={translate('services.services.option4')}
+              />
+            </div>
             {translate('services.services.option4')}
           </a>
           <a href="" className="services-right__service">
-            <img
-              src={ortodontia}
-              className="services-right-service__icon"
-              alt={translate('services.services.option5')}
-            />
+            <div className="services-right-service__icon-wrapper">
+              <img
+                src={ortodontia}
+                className="services-right-service__icon"
+                alt={translate('services.services.option5')}
+              />
+            </div>
             {translate('services.services.option5')}
           </a>
           <a href="" className="services-right__service">
-            <img
-              src={vidbiluvnya}
-              className="services-right-service__icon"
-              alt={translate('services.services.option6')}
-            />
+            <div className="services-right-service__icon-wrapper">
+              <img
+                src={vidbiluvnya}
+                className="services-right-service__icon"
+                alt={translate('services.services.option6')}
+              />
+            </div>
             {translate('services.services.option6')}
           </a>
         </div>

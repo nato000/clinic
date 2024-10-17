@@ -5,6 +5,7 @@ import logo from '../../../assets/images/Niskhodovski-2.png'
 import instagramIcon from '../../../assets/icons/instagramIcon.svg'
 import telegramIcon from '../../../assets/icons/telegramIcon.svg'
 import DropdownMenu from './dropdown'
+import AppointmentBtn from '../../appointment/ui/appointmentBtn'
 
 export const Header = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
@@ -148,9 +149,10 @@ export const Header = () => {
                     </li>
                   </ul>
                 </nav>
-                <button className="header-bottom__appointment">
+                {/* <button className="header-bottom__appointment">
                   {translate('header.bottom.appointment')}
-                </button>
+                </button> */}
+                <AppointmentBtn />
               </div>
               <div
                 className={`header-bottom-mobile ${
@@ -217,9 +219,10 @@ export const Header = () => {
                       />
                     </a>
                   </div>
-                  <button className="header-bottom__appointment">
+                  {/* <button className="header-bottom__appointment">
                     {translate('header.bottom.appointment')}
-                  </button>
+                  </button> */}
+                  <AppointmentBtn />
                 </div>
               </div>
             </div>

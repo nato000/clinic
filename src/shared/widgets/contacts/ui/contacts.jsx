@@ -5,6 +5,7 @@ import tgIcon from '../../../assets/icons/telegramIcon.svg'
 import instIcon from '../../../assets/icons/instagramIcon.svg'
 import { translate } from '../../../utils/translator'
 import './contacts.css'
+import AppointmentBtn from '../../appointment/ui/appointmentBtn'
 
 export const Contacts = () => {
   return (
@@ -55,9 +56,11 @@ export const Contacts = () => {
           </ul>
         </main>
         <footer className="contacts__footer">
-          <button className="contacts-footer__appointment">
+          {/* <button className="contacts-footer__appointment">
             {translate('header.bottom.appointment')}
-          </button>
+          </button> */}
+          <AppointmentBtn />
+
           <div className="contacts-footer__links">
             <a href="" className="contacts-footer-links__link">
               <img
