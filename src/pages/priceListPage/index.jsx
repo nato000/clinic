@@ -23,7 +23,7 @@ const PriceListPage = () => {
         <div className="container">
           <div className="prices-accordion">
             <CustomAccordion panels={accordionData} />
-          </div>{' '}
+          </div>
         </div>
       </section>
       <Services />
