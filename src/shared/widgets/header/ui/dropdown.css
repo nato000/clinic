@@ -3,12 +3,15 @@
   transition: var(--transition);
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
+  background-color: rgb(var(--color-white));
 }
 
 .dropdown-menu-list {
   list-style: none;
   padding: unset;
   margin: unset;
+  background-color: rgb(var(--color-white));
 }
 
 .dropdown-menu-list-item {

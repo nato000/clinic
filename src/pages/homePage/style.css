@@ -1,3 +1,91 @@
+.hero {
+  color: rgb(var(--color-white));
+  background-image: url('../../shared/assets/images/photo_main_horizontal.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0px;
+  min-height: 580px;
+  position: relative;
+}
+
+.hero-shading {
+  background-color: rgba(var(--color-black), 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero__title {
+  font-size: 36px;
+}
+
+.hero__description {
+  font-size: 19px;
+  max-width: 285px;
+}
+
+.hero__appointment {
+  background-color: rgba(var(--color-white), 0.9);
+  color: rgb(var(--color-black));
+  border: 1px solid rgb(var(--color-black));
+  padding: 10px 15px;
+  transition: var(--transition);
+  font-size: 16px;
+  font-weight: 600;
+}
+.hero__appointment:hover {
+  background-color: rgba(var(--color-black), 0.9);
+  color: rgb(var(--color-white));
+  border: 1px solid rgb(var(--color-white));
+}
+
+.explanation {
+  margin: 100px 0 100px 0;
+}
+
+.explanation__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 500px;
+  padding: 0 0 0 60px;
+}
+
+.explanation-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.explanation-list-item__number {
+  font-size: 24px;
+  font-weight: 200;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotatez(180deg);
+}
+
+.explanation-list-item__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.explanation-list-item-text__title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+
+.explanation-list-item-text__description {
+  font-size: 16px;
+
+  margin: 0;
+}
+
 .map {
   height: 550px;
 }
@@ -11,4 +99,7 @@
 
 /* Small devices (mobile phones) */
 @media (max-width: 767px) {
+  .explanation__list {
+    padding: 0;
+  }
 }

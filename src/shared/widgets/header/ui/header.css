@@ -78,6 +78,42 @@
   margin-left: auto;
 }
 
+/* Hamburger Menu */
+.header-top__burger-menu {
+  --bar-width: 25px; /* CSS variable for bar width */
+  --bar-height: 3px; /* CSS variable for bar height */
+  --bar-color: white; /* CSS variable for bar color */
+  background-color: transparent;
+  border: none;
+  width: var(--bar-width);
+  height: calc(var(--bar-width) * 3 / 4);
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+  transition: var(--transition);
+}
+
+.header-top__burger-menu b {
+  position: absolute;
+  left: 0;
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: rgb(var(--color-black));
+  transition: var(--transition);
+}
+
+.header-top__burger-menu b:nth-child(1) {
+  top: 0;
+}
+
+.header-top__burger-menu b:nth-child(2) {
+  top: 50%;
+}
+
+.header-top__burger-menu b:nth-child(3) {
+  top: 100%;
+}
+
 .header__bottom {
 }
 
@@ -207,7 +243,7 @@
     display: flex;
   }
   .header-bottom-mobile--active {
-    height: calc(100vh - 40px);
+    height: calc(100vh - 35px);
   }
   .header-bottom-nav-list__item-menu .dropdown-menu {
     position: relative;
