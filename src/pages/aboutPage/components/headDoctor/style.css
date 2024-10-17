@@ -5,6 +5,7 @@
 
 .row {
     display: flex;
+    padding: 16px;
 }
 
 .row div {
@@ -13,7 +14,6 @@
     justify-content: center;
     align-items: center;
     width: 50%;
-    padding: 16px;
     position: relative;
 }
 
