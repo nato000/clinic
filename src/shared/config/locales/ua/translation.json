@@ -52,7 +52,9 @@
       }
     }
   },
-  "priceListPage": {},
+  "priceListPage": {
+    "title": "Прайс лист"
+  },
   "services": {
     "title": "ПОСЛУГИ",
     "description": "NISKHODOVSKIY CLINIC - це про естетику та індивідуальність",
