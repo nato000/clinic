@@ -39,6 +39,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-weight: 700;
 }
 
 .services-right__service:hover {
@@ -59,7 +60,9 @@
   /* width: 100%;
   height: 100%; */
 }
-
+.services-right__service:hover .services-right-service__icon {
+  filter: invert(100);
+}
 @media (max-width: 1200px) {
   .services-right {
     grid-template-columns: repeat(2, 1fr);
