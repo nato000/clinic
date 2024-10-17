@@ -56,11 +56,7 @@ export const Contacts = () => {
           </ul>
         </main>
         <footer className="contacts__footer">
-          {/* <button className="contacts-footer__appointment">
-            {translate('header.bottom.appointment')}
-          </button> */}
           <AppointmentBtn />
-
           <div className="contacts-footer__links">
             <a href="" className="contacts-footer-links__link">
               <img

@@ -32,9 +32,6 @@ export const HomePage = () => {
             <p className="hero__description">
               {translate('homePage.hero.description')}
             </p>
-            {/* <button className="hero__appointment">
-              {translate('homePage.hero.appointmen')}
-            </button> */}
             <AppointmentBtn />
           </div>
         </div>

@@ -1,5 +1,9 @@
 import './header.css'
-import { translate } from '../../../utils/translator'
+import {
+  currentLanguage,
+  setLanguage,
+  translate,
+} from '../../../utils/translator'
 import { useEffect, useState } from 'react'
 import logo from '../../../assets/images/Niskhodovski-2.png'
 import instagramIcon from '../../../assets/icons/instagramIcon.svg'
@@ -30,6 +34,14 @@ export const Header = () => {
 
   const handleDropdownMobileToggle = () => {
     setDropdownMobileVisible((prevVisible) => !prevVisible)
+  }
+
+  const [language, setCurrentLanguage] = useState(currentLanguage)
+
+  const toggleLanguage = () => {
+    const newLanguage = language === 'ua' ? 'en' : 'ua'
+    setLanguage(newLanguage) // Update the language in the translation utility
+    setCurrentLanguage(newLanguage) // Update the local state
   }
 
   useEffect(() => {
@@ -90,8 +102,8 @@ export const Header = () => {
                 >
                   {translate('header.top.tel')}
                 </a>
-                <button className="header-top__lang">
-                  {translate('header.top.lang')}
+                <button className="header-top__lang" onClick={toggleLanguage}>
+                  {language === 'ua' ? 'UA' : 'EN'}
                 </button>
                 <a href={instagramIcon} className="header-top__inst">
                   <img
@@ -149,9 +161,7 @@ export const Header = () => {
                     </li>
                   </ul>
                 </nav>
-                {/* <button className="header-bottom__appointment">
-                  {translate('header.bottom.appointment')}
-                </button> */}
+
                 <AppointmentBtn />
               </div>
               <div
@@ -219,9 +229,7 @@ export const Header = () => {
                       />
                     </a>
                   </div>
-                  {/* <button className="header-bottom__appointment">
-                    {translate('header.bottom.appointment')}
-                  </button> */}
+
                   <AppointmentBtn />
                 </div>
               </div>
