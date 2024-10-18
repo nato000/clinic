@@ -106,7 +106,9 @@ export const Header = () => {
                 >
                   {translate('header.top.tel')}
                 </Link>
-                <button className="header-top__lang" onClick={toggleLanguage}>
+                <button className="header-top__lang"
+                        // onClick={toggleLanguage}
+                >
                   {language === 'ua' ? 'UA' : 'EN'}
                 </button>
                 <Link to={translate("header.top.inst")} className="header-top__inst">
