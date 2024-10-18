@@ -10,11 +10,12 @@ import instagramIcon from '../../../assets/icons/instagramIcon.svg'
 import telegramIcon from '../../../assets/icons/telegramIcon.svg'
 import DropdownMenu from './dropdown'
 import AppointmentBtn from '../../appointment/ui/appointmentBtn'
-import { Link } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
 export const Header = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
   const [isHamburgerActive, setIsHamburgerActive] = useState(false)
+  const location = useLocation() // Hook to track URL changes
 
   const toggleMobileMenu = () => {
     setIsMobileMenuActive((prevState) => !prevState)
@@ -87,13 +88,21 @@ export const Header = () => {
     }
   }, [isHamburgerActive])
 
+  useEffect(() => {
+    // Close the mobile menu when the URL changes
+    if (isMobileMenuActive) {
+      setIsMobileMenuActive(false)
+      setIsHamburgerActive(false)
+    }
+  }, [location.pathname])
+
   return (
     <>
       <header className="header">
         <div className="container">
           <div className="header-wrapper">
             <div className="header__top">
-              <Link className="header-top__logo" to={"/"}>
+              <Link className="header-top__logo" to={'/'}>
                 <img src={logo} alt="logo" className="logo" />
               </Link>
               <div className="appointment-btn-container">
@@ -109,14 +118,20 @@ export const Header = () => {
                 <button className="header-top__lang" onClick={toggleLanguage}>
                   {language === 'ua' ? 'UA' : 'EN'}
                 </button>
-                <Link to={translate("header.top.inst")} className="header-top__inst">
+                <Link
+                  to={translate('header.top.inst')}
+                  className="header-top__inst"
+                >
                   <img
                     src={instagramIcon}
                     alt="instagram"
                     className="header-top-inst__img"
                   />
                 </Link>
-                <Link to={translate("header.top.tg")} className="header-top__tg">
+                <Link
+                  to={translate('header.top.tg')}
+                  className="header-top__tg"
+                >
                   <img
                     src={telegramIcon}
                     alt="telegram"
@@ -139,7 +154,10 @@ export const Header = () => {
                 <nav className="header-bottom__nav">
                   <ul className="header-bottom-nav__list">
                     <li className="header-bottom-nav-list__item">
-                      <Link to="/about" className="header-bottom-nav-list-item__link">
+                      <Link
+                        to="/about"
+                        className="header-bottom-nav-list-item__link"
+                      >
                         {translate('header.bottom.nav.option1')}
                       </Link>
                     </li>
@@ -159,7 +177,10 @@ export const Header = () => {
                       </div>
                     </li>
                     <li className="header-bottom-nav-list__item">
-                      <Link to="/pricelist" className="header-bottom-nav-list-item__link">
+                      <Link
+                        to="/pricelist"
+                        className="header-bottom-nav-list-item__link"
+                      >
                         {translate('header.bottom.nav.option3')}
                       </Link>
                     </li>
@@ -176,7 +197,10 @@ export const Header = () => {
                 <nav className="header-bottom__nav">
                   <ul className="header-bottom-nav__list">
                     <li className="header-bottom-nav-list__item">
-                      <Link to="/about" className="header-bottom-nav-list-item__link">
+                      <Link
+                        to="/about"
+                        className="header-bottom-nav-list-item__link"
+                      >
                         {translate('header.bottom.nav.option1')}
                       </Link>
                     </li>
@@ -195,7 +219,10 @@ export const Header = () => {
                       </div>
                     </li>
                     <li className="header-bottom-nav-list__item">
-                      <Link to="pricelist" className="header-bottom-nav-list-item__link">
+                      <Link
+                        to="pricelist"
+                        className="header-bottom-nav-list-item__link"
+                      >
                         {translate('header.bottom.nav.option3')}
                       </Link>
                     </li>
