@@ -20,17 +20,10 @@
 }
 
 .services-description-section .symptoms-container .symptom-item .dot {
-    background-color: rgb(var(--color-black));
-    border-radius: 50%;
-    width: 5px;
-    height: 5px;
+    font-weight: 900;
+    font-size: 2em;
     margin-right: 12px;
 }
-
-/*.services-description-section .symptoms-container .symptom-item p {*/
-/*    margin-left: auto;*/
-/*}*/
-
 
 @media (max-width: 992px) {
     .services-description-section .symptoms-container {
