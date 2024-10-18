@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { translate } from '../../../utils/translator'
 import './appointmentBtn.css'
+import InputForm from './inputForm'
 
 export const AppointmentBtn = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -25,8 +26,7 @@ export const AppointmentBtn = () => {
             <button className="modal-close-btn" onClick={handleCloseModal}>
               &times;
             </button>
-            <h2>Schedule an Appointment</h2>
-            <p>Please fill out the details to schedule your appointment.</p>
+            <InputForm />
             {/* Additional form elements can be added here */}
           </div>
         </div>

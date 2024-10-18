@@ -29,11 +29,15 @@
 .modal-content {
   background-color: white;
   padding: 20px;
-  border-radius: 8px;
+  /*border-radius: 8px;*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   width: 90%;
   max-width: 500px; /* Adjust the size of the modal */
   position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 /* Close button for the modal */

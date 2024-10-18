@@ -11,7 +11,7 @@ const Description = ({title, description, symptoms}) => {
               {
                 symptoms.map((item, index) => (
                   <div className='symptom-item' key={index}>
-                    <span className='dot'></span>
+                    <span className='dot'>&middot;</span>
                     <p>{item}</p>
                   </div>
                 ))
