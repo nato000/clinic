@@ -9,9 +9,18 @@
   padding: 60px 0;
 }
 
-.footer__copyriting {
+.footer__copyrighting {
   font-size: 12px;
   color: rgb(var(--color-primary));
+}
+
+.footer__offer {
+  font-size: 12px;
+}
+
+.footer__offer a {
+  text-decoration: none;
+  color: rgba(var(--color-white), 0.9);
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
