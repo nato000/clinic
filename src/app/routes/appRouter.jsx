@@ -4,6 +4,7 @@ import HomePage from '../../pages/homePage'
 import AboutPage from '../../pages/aboutPage'
 import ServicesPage from '../../pages/servicesPage'
 import PriceListPage from '../../pages/priceListPage'
+import ContractPage from '../../pages/contractPage'
 
 export default function AppRouter() {
   return (
@@ -14,6 +15,7 @@ export default function AppRouter() {
           <Route path="about" element={<AboutPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="pricelist" element={<PriceListPage />} />
+          <Route path="contract" element={<ContractPage />} />
         </Route>
       </Routes>
     </Router>
