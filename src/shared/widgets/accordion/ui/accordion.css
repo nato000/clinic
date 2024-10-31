@@ -25,6 +25,8 @@
 .custom-accordion-item {
   display: flex;
   justify-content: space-between;
+
+  gap: 15px;
   padding: 10px 5px;
   border-bottom: 1px solid rgba(var(--color-secondary), 0.2);
 }
@@ -33,4 +35,40 @@
   text-align: end;
   margin-left: auto;
   color: #888;
+}
+
+.custom-accordion-value-price {
+  text-align: end;
+  color: #888;
+}
+
+@media (max-width: 1000px) {
+  .custom-accordion-value,
+  .custom-accordion-value-price {
+    font-size: 14px;
+  }
+  .css-112ujhy-MuiAccordionDetails-root {
+    padding: 20px 0 !important;
+  }
+  .custom-accordion-container {
+    margin: 16px 0;
+  }
+  .custom-accordion-value-title {
+    /* max-width: 150px; */
+    font-size: 14px;
+    grid-column: span 2;
+    grid-row-start: 1;
+  }
+  /* .custom-accordion-value {
+    grid-column: 1;
+  }
+  .custom-accordion-value-price {
+    grid-column: 1;
+  } */
+  .custom-accordion-item {
+    display: grid;
+    grid-template-columns: 75% 20%;
+    row-gap: 20px;
+    column-gap: 5px;
+  }
 }

@@ -18,9 +18,6 @@ Heading.propTypes = {
   style: PropTypes.object,
 }
 
-Heading.defaultProps = {
-  level: 1, // Default to <h1> if no level is specified
-  style: {},
-}
+
 
 export default Heading
