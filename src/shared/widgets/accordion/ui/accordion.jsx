@@ -5,7 +5,6 @@ import MuiAccordion from '@mui/material/Accordion'
 import MuiAccordionSummary from '@mui/material/AccordionSummary'
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
-
 import './accordion.css'
 
 const Accordion = styled((props) => (
@@ -33,7 +32,7 @@ const AccordionSummary = styled((props) => (
     theme.palette.mode === 'dark'
       ? 'rgba(255, 255, 255, .05)'
       : 'rgba(0, 0, 0, .03)',
-  flexDirection: 'row', // Change from 'row-reverse' to 'row'
+  flexDirection: 'row',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
   },
@@ -85,7 +84,9 @@ const CustomAccordion = ({ panels }) => {
                       paragraph
                       className="custom-accordion-item"
                     >
-                      <span>{item[0]}</span>
+                      <span className="custom-accordion-value-title">
+                        {item[0]}
+                      </span>
                       <span className="custom-accordion-value">
                         {item[1].split('\n').map((line, index) => (
                           <React.Fragment key={index}>
@@ -94,6 +95,16 @@ const CustomAccordion = ({ panels }) => {
                           </React.Fragment>
                         ))}
                       </span>
+                      {item[2] && (
+                        <span className="custom-accordion-value-price">
+                          {item[2].split('\n').map((line, index) => (
+                            <React.Fragment key={index}>
+                              {line}
+                              <br />
+                            </React.Fragment>
+                          ))}
+                        </span>
+                      )}
                     </Typography>
                   )
                 }
