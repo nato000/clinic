@@ -4,8 +4,8 @@ import React, { useEffect, useState } from 'react'
 import Description from './components/description/description'
 import { translate } from '../../shared/utils/translator'
 import Patients from './components/patients'
-import Image1 from '../../shared/assets/images/IMG_4536.jpg'
 import { Services } from '../../shared/widgets/services'
+import Patients from './components/patients'
 // import DetailDescription from './components/detailDescription'
 
 const services = [
