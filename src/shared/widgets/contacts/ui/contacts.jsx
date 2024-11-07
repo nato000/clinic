@@ -10,7 +10,7 @@ import AppointmentBtn from '../../appointment/ui/appointmentBtn'
 export const Contacts = () => {
   return (
     <>
-      <div className="contacts">
+      <div id="contacts" className="contacts">
         <h1 className="contacts__title">{translate('contacts.title')}</h1>
         <main className="contacts__content">
           <ul className="contacts-content__list">

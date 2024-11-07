@@ -11,6 +11,7 @@ import telegramIcon from '../../../assets/icons/telegramIcon.svg'
 import DropdownMenu from './dropdown'
 import AppointmentBtn from '../../appointment/ui/appointmentBtn'
 import { useLocation, Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 export const Header = () => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
@@ -102,9 +103,9 @@ export const Header = () => {
         <div className="container">
           <div className="header-wrapper">
             <div className="header__top">
-              <Link className="header-top__logo" to={'/'}>
+              <HashLink className="header-top__logo" to={'/#home'}>
                 <img src={logo} alt="logo" className="logo" />
-              </Link>
+              </HashLink>
               <div className="appointment-btn-container">
                 <AppointmentBtn />
               </div>
@@ -115,8 +116,9 @@ export const Header = () => {
                 >
                   {translate('header.top.tel')}
                 </Link>
-                <button className="header-top__lang"
-                        // onClick={toggleLanguage}
+                <button
+                  className="header-top__lang"
+                  // onClick={toggleLanguage}
                 >
                   {language === 'ua' ? 'UA' : 'EN'}
                 </button>
@@ -184,6 +186,22 @@ export const Header = () => {
                         className="header-bottom-nav-list-item__link"
                       >
                         {translate('header.bottom.nav.option3')}
+                      </Link>
+                    </li>
+                    <li className="header-bottom-nav-list__item">
+                      <HashLink
+                        to="/#contacts"
+                        className="header-bottom-nav-list-item__link"
+                      >
+                        {translate('header.bottom.nav.option4')}
+                      </HashLink>
+                    </li>
+                    <li className="header-bottom-nav-list__item">
+                      <Link
+                        to="/cooperation"
+                        className="header-bottom-nav-list-item__link"
+                      >
+                        {translate('header.bottom.nav.option5')}
                       </Link>
                     </li>
                   </ul>
