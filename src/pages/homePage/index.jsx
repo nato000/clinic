@@ -26,7 +26,7 @@ export const HomePage = () => {
   }, [])
 
   return (
-    <main className="main-content">
+    <main id="home" className="main-content">
       <section className="hero">
         <div className="hero-shading">
           <div className="container">
