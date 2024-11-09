@@ -246,6 +246,22 @@ export const Header = () => {
                         {translate('header.bottom.nav.option3')}
                       </Link>
                     </li>
+                    <li className="header-bottom-nav-list__item">
+                      <HashLink
+                        to="/#contacts"
+                        className="header-bottom-nav-list-item__link"
+                      >
+                        {translate('header.bottom.nav.option4')}
+                      </HashLink>
+                    </li>
+                    <li className="header-bottom-nav-list__item">
+                      <Link
+                        to="/cooperation"
+                        className="header-bottom-nav-list-item__link"
+                      >
+                        {translate('header.bottom.nav.option5')}
+                      </Link>
+                    </li>
                   </ul>
                 </nav>
                 <div className="header-bottom__appointment-section-wrapper">

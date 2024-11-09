@@ -5,7 +5,6 @@ import { translate } from '../../shared/utils/translator'
 import Heading from '../../shared/widgets/heading/ui/heading'
 import Services from '../../shared/widgets/services/ui/services'
 import AppointmentBtn from '../../shared/widgets/appointment/ui/appointmentBtn'
-import CustomAccordion from '../../shared/widgets/accordion/ui/accordion'
 
 export const HomePage = () => {
   useEffect(() => {
@@ -24,6 +23,7 @@ export const HomePage = () => {
     window.addEventListener('hashchange', handleHashChange) // Add listener for hash changes
     return () => window.removeEventListener('hashchange', handleHashChange) // Cleanup listener on unmount
   }, [])
+
 
   return (
     <main id="home" className="main-content">
@@ -86,7 +86,8 @@ export const HomePage = () => {
       </section>
       <Services />
       <section className="map-section">
-        <div className="map"></div>
+        <div className="map">
+        </div>
         <div className="container contacts-container">
           <Contacts />
         </div>
