@@ -1,0 +1,15 @@
+.app-btn {
+  padding: 16px;
+  font-size: 16px;
+  border: 1px solid rgb(var(--color-black));
+  background-color: rgb(var(--color-white));
+  transition: var(--transition);
+}
+
+.app-btn:hover {
+  background-color: rgb(var(--color-black));
+  color: rgb(var(--color-white));
+}
+
+@media (max-width: 767px) {
+}

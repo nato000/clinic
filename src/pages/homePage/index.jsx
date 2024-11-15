@@ -5,6 +5,8 @@ import { translate } from '../../shared/utils/translator'
 import Heading from '../../shared/widgets/heading/ui/heading'
 import Services from '../../shared/widgets/services/ui/services'
 import AppointmentBtn from '../../shared/widgets/appointment/ui/appointmentBtn'
+import HeroSection from '../../shared/widgets/heroSection/ui/heroSection'
+import AppButton from '../../shared/widgets/appButton/ui/appButton'
 
 export const HomePage = () => {
   useEffect(() => {
@@ -24,20 +26,14 @@ export const HomePage = () => {
     return () => window.removeEventListener('hashchange', handleHashChange) // Cleanup listener on unmount
   }, [])
 
-
   return (
     <main id="home" className="main-content">
-      <section className="hero">
-        <div className="hero-shading">
-          <div className="container">
-            <h1 className="hero__title">{translate('homePage.hero.title')}</h1>
-            <p className="hero__description">
-              {translate('homePage.hero.description')}
-            </p>
-            <AppointmentBtn />
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title={translate('homePage.hero.title')}
+        description={translate('homePage.hero.description')}
+      >
+        <AppointmentBtn />
+      </HeroSection>
       <section className="explanation">
         <div className="container">
           <Heading level={2} text={translate('homePage.explanation.title')} />
@@ -86,8 +82,7 @@ export const HomePage = () => {
       </section>
       <Services />
       <section className="map-section">
-        <div className="map">
-        </div>
+        <div className="map"></div>
         <div className="container contacts-container">
           <Contacts />
         </div>

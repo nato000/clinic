@@ -5,6 +5,8 @@ import Description from './components/description/description'
 import { translate } from '../../shared/utils/translator'
 import { Services } from '../../shared/widgets/services'
 import Patients from './components/patients'
+import HeroSection from '../../shared/widgets/heroSection/ui/heroSection'
+import AppointmentBtn from '../../shared/widgets/appointment/ui/appointmentBtn'
 // import DetailDescription from './components/detailDescription'
 
 const services = [
@@ -58,26 +60,34 @@ const ServicesPage = () => {
   return (
     <main className="services-page-container">
       {currentService ? (
-        <div>
-          {/*<h2>Current Service: {currentService.title}</h2>*/}
-          {/*  Description section */}
-          <Description
+        <>
+          <HeroSection
             title={translate(`servicesPage.${currentService.title}.title`)}
-            description={translate(
-              `servicesPage.${currentService.title}.description`
-            )}
-            symptoms={translate(
-              `servicesPage.${currentService.title}.symptoms`
-            )}
-          />
-          {/*  Patients section*/}
-          <Patients images={currentService.images} />
-          {/*  Questions section*/}
-          {/*  Services section global*/}
-          <Services />
-          {/*<DetailDescription />*/}
-          {/* need or not DetailDescription section */}
-        </div>
+            // description={translate('homePage.hero.description')}
+          >
+            <AppointmentBtn />
+          </HeroSection>
+          <div>
+            {/*<h2>Current Service: {currentService.title}</h2>*/}
+            {/*  Description section */}
+            <Description
+              title={translate(`servicesPage.${currentService.title}.title`)}
+              description={translate(
+                `servicesPage.${currentService.title}.description`
+              )}
+              symptoms={translate(
+                `servicesPage.${currentService.title}.symptoms`
+              )}
+            />
+            {/*  Patients section*/}
+            <Patients images={currentService.images} />
+            {/*  Questions section*/}
+            {/*  Services section global*/}
+            <Services />
+            {/*<DetailDescription />*/}
+            {/* need or not DetailDescription section */}
+          </div>
+        </>
       ) : (
         <p>No services available.</p>
       )}

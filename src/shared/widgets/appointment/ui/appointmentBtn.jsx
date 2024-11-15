@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { translate } from '../../../utils/translator'
 import './appointmentBtn.css'
 import InputForm from './inputForm'
+import AppButton from '../../appButton/ui/appButton'
 
 export const AppointmentBtn = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -16,9 +17,11 @@ export const AppointmentBtn = () => {
 
   return (
     <>
-      <button className="appointment-btn" onClick={handleOpenModal}>
-        {translate('header.bottom.appointment')}
-      </button>
+      <AppButton
+        text={translate('header.bottom.appointment')}
+        onClick={handleOpenModal}
+        // styleType={`black`}
+      />
 
       {isModalOpen && (
         <div className="modal-overlay" onClick={handleCloseModal}>

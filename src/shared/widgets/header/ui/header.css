@@ -14,13 +14,15 @@
 
 .header__top,
 .header__bottom {
-  padding: 5px 0;
   width: 100%;
 }
 
 .header__top {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: var(--app-header-top-height);
+  padding: 5px 0 0 0;
 }
 
 .header-top__logo {
@@ -75,7 +77,7 @@
 
 .header-top__burger-menu {
   display: none;
-  margin-left: 5%;
+  margin-left: 10px;
   /*margin-left: auto;*/
 }
 
@@ -116,12 +118,14 @@
 }
 
 .header__bottom {
+  padding: 0 0 5px 0;
 }
 
 .header-bottom-desktop {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: var(--app-header-bottom-height);
 }
 
 .header-bottom-mobile {
@@ -191,7 +195,7 @@
   justify-content: space-between;
 }
 
-.appointment-btn-container{
+.appointment-btn-container {
   display: none;
 }
 
@@ -209,10 +213,14 @@
   }
 }
 /* Small devices (mobile phones) */
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .header__description {
     font-size: 14px;
     line-height: 14px;
+  }
+  .header__top {
+    height: var(--app-header-bottom-height);
+    padding: 5px 0;
   }
   .header__bottom {
     padding: 0;
@@ -249,7 +257,7 @@
     display: flex;
   }
   .header-bottom-mobile--active {
-    height: calc(100vh - 86px);
+    height: calc(100vh - var(--app-header-bottom-height));
   }
   .header-bottom-nav-list__item-menu .dropdown-menu {
     position: relative;
@@ -257,8 +265,8 @@
   .header-top__burger-menu {
     display: block;
   }
-  .appointment-btn-container{
+  .appointment-btn-container {
     display: block;
-    margin: 12px 0 12px auto;
+    margin: 0px 0 0px auto;
   }
 }
