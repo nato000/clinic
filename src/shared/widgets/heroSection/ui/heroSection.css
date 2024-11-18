@@ -38,10 +38,16 @@
   font-size: 16px;
   font-weight: 600;
 }
+
 .hero__appointment:hover {
   background-color: rgba(var(--color-black), 0.9);
   color: rgb(var(--color-white));
   border: 1px solid rgb(var(--color-white));
+}
+
+.hero__brn-wrapper {
+  display: flex;
+  gap: 10px;
 }
 
 @media (max-width: 767px) {

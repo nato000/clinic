@@ -7,8 +7,12 @@ import Services from '../../shared/widgets/services/ui/services'
 import AppointmentBtn from '../../shared/widgets/appointment/ui/appointmentBtn'
 import HeroSection from '../../shared/widgets/heroSection/ui/heroSection'
 import AppButton from '../../shared/widgets/appButton/ui/appButton'
+import MapSection from '../../shared/widgets/mapSection/ui/mapSection'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 export const HomePage = () => {
+  const navigate = useNavigate() // Initialize the navigate function
+
   useEffect(() => {
     const handleHashChange = () => {
       if (window.location.hash) {
@@ -26,6 +30,10 @@ export const HomePage = () => {
     return () => window.removeEventListener('hashchange', handleHashChange) // Cleanup listener on unmount
   }, [])
 
+  const handleHeroBtn = () => {
+    navigate('/pricelist')
+  }
+
   return (
     <main id="home" className="main-content">
       <HeroSection
@@ -33,6 +41,7 @@ export const HomePage = () => {
         description={translate('homePage.hero.description')}
       >
         <AppointmentBtn />
+        <AppButton text={'Ціна'} onClick={handleHeroBtn} />
       </HeroSection>
       <section className="explanation">
         <div className="container">
@@ -81,12 +90,23 @@ export const HomePage = () => {
         </div>
       </section>
       <Services />
-      <section className="map-section">
-        <div className="map"></div>
+      <MapSection />
+      {/* <section className="map-section">
+        <div className="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3125171.733651879!2d25.9160012!3d50.4193434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf88432cf7b7%3A0x9ccd32f19846e611!2sNiskhodovskiy%20Clinic!5e1!3m2!1sru!2sua!4v1731793663259!5m2!1sru!2sua"
+            // width="600"
+            // height="450"
+            className="map__iframe"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
         <div className="container contacts-container">
           <Contacts />
         </div>
-      </section>
+      </section> */}
       {/*  Hero section*/}
       {/*  ReasonsToContact section*/}
       {/*  Services section global*/}

@@ -1,10 +1,11 @@
 .contacts {
   background-color: rgb(var(--color-secondary));
-  width: 290px;
+  width: 360px;
   padding: 30px 40px;
   position: absolute;
-  bottom: 50px;
+  bottom: 55px;
   left: 20px;
+  transition: var(--transition);
 }
 
 .contacts__title {
@@ -93,24 +94,24 @@
   filter: invert(50%);
 }
 
-@media (max-width: 767px) {
-}
-
-@media (max-width: 500px) {
+@media (max-width: 845px) {
   .contacts {
     background-color: rgb(var(--color-secondary));
-    width: calc(100% - 80px);
+    width: 100%;
     padding: 30px 40px;
     position: relative;
     bottom: -100%;
     left: 0px;
-    /* transform: translate(-0%, -50%); */
   }
+  .contacts-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
 }
 @media (max-width: 360px) {
   .contacts {
-    width: calc(100% - 20px);
-
     padding: 10px 10px;
   }
 }

@@ -7,6 +7,9 @@ import { Services } from '../../shared/widgets/services'
 import Patients from './components/patients'
 import HeroSection from '../../shared/widgets/heroSection/ui/heroSection'
 import AppointmentBtn from '../../shared/widgets/appointment/ui/appointmentBtn'
+import CallToAction from '../../shared/widgets/callToAction/ui/callToAction'
+import MapSection from '../../shared/widgets/mapSection/ui/mapSection'
+import DoctorsSection from '../../shared/widgets/doctorsSection/ui/doctorsSection'
 // import DetailDescription from './components/detailDescription'
 
 const services = [
@@ -68,8 +71,6 @@ const ServicesPage = () => {
             <AppointmentBtn />
           </HeroSection>
           <div>
-            {/*<h2>Current Service: {currentService.title}</h2>*/}
-            {/*  Description section */}
             <Description
               title={translate(`servicesPage.${currentService.title}.title`)}
               description={translate(
@@ -79,6 +80,8 @@ const ServicesPage = () => {
                 `servicesPage.${currentService.title}.symptoms`
               )}
             />
+            <CallToAction />
+
             {/*  Patients section*/}
             <Patients images={currentService.images} />
             {/*  Questions section*/}
@@ -91,6 +94,8 @@ const ServicesPage = () => {
       ) : (
         <p>No services available.</p>
       )}
+      <DoctorsSection />
+      <MapSection />
     </main>
   )
 }

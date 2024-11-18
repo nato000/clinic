@@ -11,5 +11,15 @@
   color: rgb(var(--color-white));
 }
 
+.app-btn--black {
+  color: rgb(var(--color-white));
+  background-color: rgb(var(--color-black));
+}
+
+.app-btn--black:hover {
+  background-color: rgb(var(--color-white));
+  color: rgb(var(--color-black));
+  border: 1px solid rgb(var(--color-black));
+}
 @media (max-width: 767px) {
 }

@@ -17,7 +17,7 @@ export const HeroSection = ({ title, description, children }) => {
               {description}
               {/* {translate('homePage.hero.description')} */}
             </p>
-            {children}
+            <div className="hero__brn-wrapper">{children}</div>
           </div>
         </div>
       </section>

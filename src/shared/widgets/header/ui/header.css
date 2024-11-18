@@ -42,7 +42,7 @@
 .header-top__tg {
   text-decoration: none;
   color: rgb(var(--color-black));
-  padding: 5px;
+  padding: 3px;
 }
 
 .header-top-socials {
@@ -65,7 +65,7 @@
 .header-top__tg,
 .header-top__inst {
   display: flex;
-  width: 20px;
+  width: 25px;
 }
 
 .header-top-inst__img {
@@ -218,9 +218,12 @@
     font-size: 14px;
     line-height: 14px;
   }
+  .header-wrapper {
+    padding: 5px 0;
+  }
   .header__top {
     height: var(--app-header-bottom-height);
-    padding: 5px 0;
+    padding: 0;
   }
   .header__bottom {
     padding: 0;

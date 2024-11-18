@@ -172,7 +172,7 @@ export const Header = () => {
                         onMouseLeave={handleMouseLeave}
                       >
                         <Link
-                          to="/services"
+                          to="/servicesHome"
                           className="header-bottom-nav-list-item__link"
                         >
                           {translate('header.bottom.nav.option2.title')}
@@ -190,19 +190,11 @@ export const Header = () => {
                     </li>
                     <li className="header-bottom-nav-list__item">
                       <HashLink
-                        to="/#contacts"
+                        to="#contacts"
                         className="header-bottom-nav-list-item__link"
                       >
                         {translate('header.bottom.nav.option4')}
                       </HashLink>
-                    </li>
-                    <li className="header-bottom-nav-list__item">
-                      <Link
-                        to="/cooperation"
-                        className="header-bottom-nav-list-item__link"
-                      >
-                        {translate('header.bottom.nav.option5')}
-                      </Link>
                     </li>
                   </ul>
                 </nav>

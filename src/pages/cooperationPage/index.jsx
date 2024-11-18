@@ -45,11 +45,11 @@ const CooperationPage = () => {
       </section>
       <section className="cooperation-busines">
         <div className="container ">
-          <h2 className="cooperation-busines__title">
-            {translate('cooperation.busines.advantagesTitle')}
-          </h2>
           <div className="cooperation-busines-container">
             <div className="cooperation-busines__main">
+              <h2 className="cooperation-busines__title">
+                {translate('cooperation.busines.advantagesTitle')}
+              </h2>
               <ul className="cooperation-busines__list">
                 {Object.keys(businesAdvantageList).map((key, index) => (
                   <li className="cooperation-busines-list__item" key={index}>
