@@ -7,6 +7,15 @@
 
   --transition: 0.2s ease-in-out;
 
+  --app-header-top-height: 42px;
+  --app-header-bottom-height: 52px;
+  --app-header-padding: 5px;
+
+  --app-hero-section-height: calc(
+    var(--app-header-top-height) + var(--app-header-bottom-height) +
+      (var(--app-header-padding) * 1)
+  );
+
   --font-h1-size: 2em;
   --font-h1-line-height: 36px;
   --font-h2-size: 0.8em;
@@ -26,7 +35,13 @@
   :root {
   }
 }
-
+@media (max-width: 650px) {
+  :root {
+    --app-hero-section-height: calc(
+      var(--app-header-bottom-height) + (var(--app-header-padding) * 2)
+    );
+  }
+}
 @media (max-width: 440px) {
   :root {
   }

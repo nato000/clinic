@@ -11,8 +11,13 @@ export const Footer = () => {
             <p className="footer__copyrighting">
               {translate('footer.copyrighting')}
             </p>
-            <p className='footer__offer'>
-              <Link to={`/contract?contract=publicOfferContract`}>{translate('footer.offer.publicOfferContract')}</Link>
+            <p className="footer__offer">
+              <Link to="/cooperation">
+                {translate('header.bottom.nav.option5')}
+              </Link>
+              <Link to={`/contract?contract=publicOfferContract`}>
+                {translate('footer.offer.publicOfferContract')}
+              </Link>
             </p>
           </div>
         </div>

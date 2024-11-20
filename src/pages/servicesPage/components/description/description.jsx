@@ -1,21 +1,19 @@
-import "./style.css";
-const Description = ({title, description, symptoms}) => {
+import './style.css'
+const Description = ({ title, description, symptoms }) => {
   return (
     <section className="services-description-section">
-      <div className="container">
+      <div className="container services-description-section-container">
         <div className="description-wrapper">
-          <div className='description-column'>
-            <h1>{title}</h1>
+          <div className="description-column">
+            <h2>{title}</h2>
             <p>{description}</p>
             <div className="symptoms-container">
-              {
-                symptoms.map((item, index) => (
-                  <div className='symptom-item' key={index}>
-                    <span className='dot'>&middot;</span>
-                    <p>{item}</p>
-                  </div>
-                ))
-              }
+              {symptoms.map((item, index) => (
+                <div className="symptom-item" key={index}>
+                  <span className="dot">&middot;</span>
+                  <p>{item}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -24,4 +22,4 @@ const Description = ({title, description, symptoms}) => {
   )
 }
 
-export default Description;
+export default Description

@@ -5,44 +5,61 @@ import Description from './components/description/description'
 import { translate } from '../../shared/utils/translator'
 import { Services } from '../../shared/widgets/services'
 import Patients from './components/patients'
-// import DetailDescription from './components/detailDescription'
+import HeroSection from '../../shared/widgets/heroSection/ui/heroSection'
+import AppointmentBtn from '../../shared/widgets/appointment/ui/appointmentBtn'
+import CallToAction from '../../shared/widgets/callToAction/ui/callToAction'
+import MapSection from '../../shared/widgets/mapSection/ui/mapSection'
+import DoctorsSection from '../../shared/widgets/doctorsSection/ui/doctorsSection'
+import CustomAccordion from '../../shared/widgets/accordion/ui/accordion'
+import Heading from '../../shared/widgets/heading/ui/heading'
 
 const services = [
   {
     title: 'dentaltreatment',
     content: 'header.bottom.nav.option2.option1',
     images: ['caries-1', 'caries-2'],
+    prices: [
+      'Лікування карієсу',
+      'Лікування каналів (під мікроскопом)',
+      'Перелікування каналів',
+    ],
   },
   {
     title: 'orthodontics',
     content: 'header.bottom.nav.option2.option2',
     images: ['composyt'],
+    prices: ['Лазерне відбілювання'],
   },
   {
     title: 'surgery',
     content: 'header.bottom.nav.option2.option3',
     images: ['viniry-1', 'viniry-2', 'viniry-3'],
+    prices: ['Фотополімерний вінір'],
   },
   {
     title: 'implantation',
     content: 'header.bottom.nav.option2.option4',
     images: ['IMG_4536'],
+    prices: ['Дизайн посмішки (MockUp)'],
   },
   {
     title: 'prosthetics',
     content: 'header.bottom.nav.option2.option5',
     images: ['viniry-4'],
+    prices: ['Корекція ясен'],
   },
   {
     title: 'teethwhitening',
     content: 'header.bottom.nav.option2.option6',
     images: ['otbel-1', 'otbel-2'],
+    prices: ['Консультація'],
   },
 ]
 
 const ServicesPage = () => {
   const location = useLocation()
   const [currentService, setCurrentService] = useState(null)
+  const [accordionData, setAccordionData] = useState([])
 
   useEffect(() => {
     // Get the hash value from the URL and remove the '#' symbol
@@ -55,33 +72,86 @@ const ServicesPage = () => {
     setCurrentService(service || services[0])
   }, [location])
 
+  useEffect(() => {
+    if (currentService) {
+      const priceListUnreducted = translate('priceListPage.accordion') || [] // Ensure it's an array
+      const priceList = priceListUnreducted[0]?.content // Ensure `content` exists
+
+      if (priceList) {
+        const filteredPrices = currentService.prices.reduce(
+          (acc, priceName) => {
+            if (priceList[priceName]) {
+              acc[priceName] = priceList[priceName]
+            }
+            return acc
+          },
+          {}
+        )
+
+        const formattedData = Object.entries(filteredPrices).map(
+          ([key, values]) => ({
+            title: key,
+            content: values.map((item) => ({
+              title: item.title,
+              value: item.value,
+            })),
+          })
+        )
+
+        setAccordionData(formattedData)
+      }
+    }
+  }, [currentService])
+
   return (
-    <main className="services-page-container">
-      {currentService ? (
-        <div>
-          {/*<h2>Current Service: {currentService.title}</h2>*/}
-          {/*  Description section */}
-          <Description
-            title={translate(`servicesPage.${currentService.title}.title`)}
-            description={translate(
-              `servicesPage.${currentService.title}.description`
-            )}
-            symptoms={translate(
-              `servicesPage.${currentService.title}.symptoms`
-            )}
-          />
-          {/*  Patients section*/}
-          <Patients images={currentService.images} />
-          {/*  Questions section*/}
-          {/*  Services section global*/}
-          <Services />
-          {/*<DetailDescription />*/}
-          {/* need or not DetailDescription section */}
-        </div>
-      ) : (
-        <p>No services available.</p>
-      )}
-    </main>
+    <>
+      <main className="services-page-container">
+        {currentService ? (
+          <>
+            <HeroSection
+              title={translate(`servicesPage.${currentService.title}.title`)}
+              // description={translate('homePage.hero.description')}
+              sectionClass={`hero-background--${currentService.title}`}
+            >
+              <AppointmentBtn />
+            </HeroSection>
+            <Description
+              title={translate(`servicesPage.${currentService.title}.title`)}
+              description={translate(
+                `servicesPage.${currentService.title}.description`
+              )}
+              symptoms={translate(
+                `servicesPage.${currentService.title}.symptoms`
+              )}
+            />
+
+            <section className="price-section">
+              <div className="container price-section-container">
+                <Heading
+                  level={2}
+                  text={translate(`servicesPage.priceSection.title`)}
+                />
+                <CustomAccordion panels={accordionData} />
+              </div>
+            </section>
+
+            <CallToAction />
+
+            {/*  Patients section*/}
+            <Patients images={currentService.images} />
+            {/*  Questions section*/}
+            {/*  Services section global*/}
+            <Services />
+            {/*<DetailDescription />*/}
+            {/* need or not DetailDescription section */}
+          </>
+        ) : (
+          <p>No services available.</p>
+        )}
+        <DoctorsSection />
+        <MapSection />
+      </main>
+    </>
   )
 }
 

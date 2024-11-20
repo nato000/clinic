@@ -2,7 +2,7 @@
 }
 
 .cooperatio-hero {
-  height: 100vh;
+  height: calc(100vh - var(--app-hero-section-height));
   background-color: rgb(var(--color-secondary));
 }
 
@@ -64,7 +64,7 @@
 
 .cooperation-busines-container {
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
 
 .cooperation-busines__main {
@@ -73,9 +73,11 @@
 
 .cooperation-busines__title {
   font-size: 40px;
+  margin: 20px 0;
 }
 
 .cooperation-busines__list {
+  padding: 0 0 0 20px;
 }
 
 .cooperation-busines-list__item {
@@ -95,10 +97,12 @@
 }
 
 .cooperation-busines__optional-title {
-  font-size: 25px;
+  font-size: 40px;
+  margin: 20px 0;
 }
 
 .cooperation-busines__optional-list {
+  padding: 0 0 0 20px;
 }
 
 .cooperation-busines-optional-list__item {
@@ -215,6 +219,9 @@
   .cooperation-footer-container {
     flex-direction: column;
   }
+  .cooperation-busines-container {
+    gap: 10px;
+  }
 }
 
 /* Small devices (mobile phones) */
@@ -234,7 +241,8 @@
   .cooperation-busines__title,
   .cooperation-prices__title,
   .cooperation-risks__title,
-  .cooperation-footer__title {
+  .cooperation-footer__title,
+  .cooperation-busines__optional-title {
     font-size: 30px;
   }
 }

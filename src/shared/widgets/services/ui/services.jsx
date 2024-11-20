@@ -8,8 +8,18 @@ import ortodontia from '../../../assets/icons/ortodontiya-w.svg'
 import vidbiluvnya from '../../../assets/icons/deti-w.svg'
 import Heading from '../../heading/ui/heading'
 import { translate } from '../../../utils/translator'
+import { Link } from 'react-router-dom'
 
 export const Services = () => {
+  const servicesObjects = [
+    'dentaltreatment',
+    'orthodontics',
+    'surgery',
+    'implantation',
+    'prosthetics',
+    'teethwhitening',
+  ]
+
   return (
     <section className="services">
       <div className="container services-container">
@@ -24,7 +34,10 @@ export const Services = () => {
           </p>
         </div>
         <div className="services-right">
-          <a href="" className="services-right__service">
+          <Link
+            to={`/services#${servicesObjects[0]}`}
+            className="services-right__service"
+          >
             <div className="services-right-service__icon-wrapper">
               <img
                 src={likuvnya}
@@ -33,8 +46,11 @@ export const Services = () => {
               />
             </div>
             {translate('services.services.option1')}
-          </a>
-          <a href="" className="services-right__service">
+          </Link>
+          <Link
+            to={`/services#${servicesObjects[1]}`}
+            className="services-right__service"
+          >
             <div className="services-right-service__icon-wrapper">
               <img
                 src={protez}
@@ -43,8 +59,11 @@ export const Services = () => {
               />
             </div>
             {translate('services.services.option2')}
-          </a>
-          <a href="" className="services-right__service">
+          </Link>
+          <Link
+            to={`/services#${servicesObjects[2]}`}
+            className="services-right__service"
+          >
             <div className="services-right-service__icon-wrapper">
               <img
                 src={hirurgia}
@@ -53,8 +72,11 @@ export const Services = () => {
               />
             </div>
             {translate('services.services.option3')}
-          </a>
-          <a href="" className="services-right__service">
+          </Link>
+          <Link
+            to={`/services#${servicesObjects[3]}`}
+            className="services-right__service"
+          >
             <div className="services-right-service__icon-wrapper">
               <img
                 src={implantacia}
@@ -63,8 +85,11 @@ export const Services = () => {
               />
             </div>
             {translate('services.services.option4')}
-          </a>
-          <a href="" className="services-right__service">
+          </Link>
+          <Link
+            to={`/services#${servicesObjects[4]}`}
+            className="services-right__service"
+          >
             <div className="services-right-service__icon-wrapper">
               <img
                 src={ortodontia}
@@ -73,8 +98,11 @@ export const Services = () => {
               />
             </div>
             {translate('services.services.option5')}
-          </a>
-          <a href="" className="services-right__service">
+          </Link>
+          <Link
+            to={`/services#${servicesObjects[5]}`}
+            className="services-right__service"
+          >
             <div className="services-right-service__icon-wrapper">
               <img
                 src={vidbiluvnya}
@@ -83,7 +111,7 @@ export const Services = () => {
               />
             </div>
             {translate('services.services.option6')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
