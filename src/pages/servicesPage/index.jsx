@@ -10,9 +10,8 @@ import AppointmentBtn from '../../shared/widgets/appointment/ui/appointmentBtn'
 import CallToAction from '../../shared/widgets/callToAction/ui/callToAction'
 import MapSection from '../../shared/widgets/mapSection/ui/mapSection'
 import DoctorsSection from '../../shared/widgets/doctorsSection/ui/doctorsSection'
-import ScrollToTop from '../../shared/widgets/scrollToTop/scrollToTop'
 import CustomAccordion from '../../shared/widgets/accordion/ui/accordion'
-// import DetailDescription from './components/detailDescription'
+import Heading from '../../shared/widgets/heading/ui/heading'
 
 const services = [
   {
@@ -128,6 +127,10 @@ const ServicesPage = () => {
 
             <section className="price-section">
               <div className="container price-section-container">
+                <Heading
+                  level={2}
+                  text={translate(`servicesPage.priceSection.title`)}
+                />
                 <CustomAccordion panels={accordionData} />
               </div>
             </section>

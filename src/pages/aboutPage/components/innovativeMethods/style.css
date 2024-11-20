@@ -6,12 +6,12 @@
   color: rgba(var(--color-black), 1);
   font-size: var(--font-h1-size);
   line-height: var(--font-h1-line-height);
-  margin: 8vh 0 4vh;
+  margin: 50px 0 50px;
 }
 
 .innovative-methods-container .hr {
-  width: 105%;
-  transform: translateX(-5%);
+  width: 100%;
+  transform: translateX(0%);
   position: relative;
   border: none; /* Remove default border styling */
   border-top: 2px solid rgba(var(--color-primary), 0.3); /* Add custom border styling for the line */

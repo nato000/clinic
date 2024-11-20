@@ -21,3 +21,7 @@
 .hero-background--teethwhitening {
   background-image: url('../../shared/assets/images/P1010702.jpg');
 }
+
+.price-section-container {
+  padding: 50px 10px;
+}
