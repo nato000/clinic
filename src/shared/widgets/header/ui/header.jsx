@@ -24,13 +24,35 @@ export const Header = () => {
   }
 
   const [isDropdownVisible, setDropdownVisible] = useState(false)
+  const [isDropdownAlwaysVisible, setDropdownAlwaysVisible] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 650) {
+        setDropdownAlwaysVisible(true)
+        setDropdownVisible(true) // Ensure the dropdown is visible
+      } else {
+        setDropdownAlwaysVisible(false)
+        setDropdownVisible(false) // Hide dropdown when resizing to larger screens
+      }
+    }
+
+    // Initial check
+    handleResize()
+
+    // Listen for window resize events
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup on component unmount
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const handleMouseEnter = () => {
-    setDropdownVisible(true)
+    if (!isDropdownAlwaysVisible) setDropdownVisible(true)
   }
 
   const handleMouseLeave = () => {
-    setDropdownVisible(false)
+    if (!isDropdownAlwaysVisible) setDropdownVisible(false)
   }
 
   const [isDropdownMobileVisible, setDropdownMobileVisible] = useState(true)
@@ -95,7 +117,7 @@ export const Header = () => {
       setIsMobileMenuActive(false)
       setIsHamburgerActive(false)
     }
-  }, [location.pathname])
+  }, [location.pathname, location.hash])
 
   return (
     <>
@@ -198,7 +220,6 @@ export const Header = () => {
                     </li>
                   </ul>
                 </nav>
-
                 <AppointmentBtn />
               </div>
               <div
@@ -217,10 +238,7 @@ export const Header = () => {
                       </Link>
                     </li>
                     <li className="header-bottom-nav-list__item">
-                      <div
-                        className="header-bottom-nav-list__item-menu"
-                        onClick={handleDropdownMobileToggle} // Change to click-based toggle
-                      >
+                      <div className="header-bottom-nav-list__item-menu">
                         <Link
                           to="/services"
                           className="header-bottom-nav-list-item__link"

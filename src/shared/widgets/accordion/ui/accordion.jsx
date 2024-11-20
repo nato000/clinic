@@ -75,54 +75,46 @@ const CustomAccordion = ({ panels }) => {
             <Typography>{panel.title}</Typography>
           </AccordionSummary>
           <AccordionDetails className="custom-accordion-details">
-            {Array.isArray(panel.content) ? (
-              panel.content.map((item, i) => {
-                if (Array.isArray(item)) {
-                  return (
-                    <Typography
-                      key={i}
-                      paragraph
-                      className="custom-accordion-item"
-                    >
-                      <span className="custom-accordion-value-title">
-                        {item[0]}
-                      </span>
-                      <span className="custom-accordion-value">
-                        {item[1].split('\n').map((line, index) => (
-                          <React.Fragment key={index}>
-                            {line}
-                            <br />
-                          </React.Fragment>
-                        ))}
-                      </span>
-                      {item[2] && (
-                        <span className="custom-accordion-value-price">
-                          {item[2].split('\n').map((line, index) => (
-                            <React.Fragment key={index}>
-                              {line}
-                              <br />
-                            </React.Fragment>
-                          ))}
-                        </span>
-                      )}
-                    </Typography>
-                  )
-                }
-                return (
-                  <Typography
-                    key={i}
-                    paragraph
-                    className="custom-accordion-item"
+            {typeof panel.content === 'object' &&
+            !Array.isArray(panel.content) ? (
+              // Content is an object with categories
+              Object.entries(panel.content).map(
+                ([category, items], categoryIndex) => (
+                  <div
+                    key={categoryIndex}
+                    className="custom-accordion-category"
                   >
-                    {item.split('\n').map((line, index) => (
-                      <React.Fragment key={index}>
-                        {line}
-                        <br />
-                      </React.Fragment>
+                    <Typography
+                      variant="h6"
+                      className="custom-accordion-category-title"
+                    >
+                      {category}
+                    </Typography>
+                    {items.map((item, itemIndex) => (
+                      <div key={itemIndex} className="custom-accordion-item">
+                        <Typography className="custom-accordion-item-title">
+                          {item.title}
+                        </Typography>
+                        <Typography className="custom-accordion-item-value">
+                          {item.value}
+                        </Typography>
+                      </div>
                     ))}
-                  </Typography>
+                  </div>
                 )
-              })
+              )
+            ) : Array.isArray(panel.content) ? (
+              // Content is an array of title-value pairs
+              panel.content.map((item, itemIndex) => (
+                <div key={itemIndex} className="custom-accordion-item">
+                  <Typography className="custom-accordion-item-title">
+                    {item.title}
+                  </Typography>
+                  <Typography className="custom-accordion-item-value">
+                    {item.value}
+                  </Typography>
+                </div>
+              ))
             ) : (
               <Typography className="custom-accordion-item">
                 {panel.content}
@@ -141,11 +133,12 @@ CustomAccordion.propTypes = {
       title: PropTypes.string.isRequired,
       content: PropTypes.oneOfType([
         PropTypes.string,
+        PropTypes.object, // For category-style content
         PropTypes.arrayOf(
-          PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.arrayOf(PropTypes.string),
-          ])
+          PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            value: PropTypes.string.isRequired,
+          })
         ),
       ]).isRequired,
     })

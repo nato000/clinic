@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import './style.css'
-import Contacts from '../../shared/widgets/contacts/ui/contacts'
 import { translate } from '../../shared/utils/translator'
 import Heading from '../../shared/widgets/heading/ui/heading'
 import Services from '../../shared/widgets/services/ui/services'
@@ -9,6 +8,10 @@ import HeroSection from '../../shared/widgets/heroSection/ui/heroSection'
 import AppButton from '../../shared/widgets/appButton/ui/appButton'
 import MapSection from '../../shared/widgets/mapSection/ui/mapSection'
 import { Navigate, useNavigate } from 'react-router-dom'
+
+import img1 from '../../shared/assets/images/P1010712.jpg'
+import img2 from '../../shared/assets/images/P1010552.jpg'
+import img3 from '../../shared/assets/images/P1052319.jpg'
 
 export const HomePage = () => {
   const navigate = useNavigate() // Initialize the navigate function
@@ -44,73 +47,78 @@ export const HomePage = () => {
         <AppButton text={'Ціна'} onClick={handleHeroBtn} />
       </HeroSection>
       <section className="explanation">
-        <div className="container">
-          <Heading level={2} text={translate('homePage.explanation.title')} />
-          <ul className="explanation__list">
-            <li className="explanation-list__item">
-              <span className="explanation-list-item__number">
-                {translate('homePage.explanation.list.option1.number')}
-              </span>
-              <div className="explanation-list-item__text">
-                <h3 className="explanation-list-item-text__title">
-                  {translate('homePage.explanation.list.option1.title')}
-                </h3>
-                <p className="explanation-list-item-text__description">
-                  {translate('homePage.explanation.list.option1.description')}
-                </p>
-              </div>
-            </li>
-            <li className="explanation-list__item">
-              <span className="explanation-list-item__number">
-                {translate('homePage.explanation.list.option2.number')}
-              </span>
-              <div className="explanation-list-item__text">
-                <h3 className="explanation-list-item-text__title">
-                  {translate('homePage.explanation.list.option2.title')}
-                </h3>
-                <p className="explanation-list-item-text__description">
-                  {translate('homePage.explanation.list.option2.description')}
-                </p>
-              </div>
-            </li>
-            <li className="explanation-list__item">
-              <span className="explanation-list-item__number">
-                {translate('homePage.explanation.list.option3.number')}
-              </span>
-              <div className="explanation-list-item__text">
-                <h3 className="explanation-list-item-text__title">
-                  {translate('homePage.explanation.list.option3.title')}
-                </h3>
-                <p className="explanation-list-item-text__description">
-                  {translate('homePage.explanation.list.option3.description')}
-                </p>
-              </div>
-            </li>
-          </ul>
+        <div className="container explanation-container">
+          <div className="explanation__images">
+            <div className="explanation-images__image-wrapper">
+              <img
+                src={img2}
+                alt="clinic image"
+                className="explanation-images__image"
+              />
+            </div>
+            <div className="explanation-images__image-wrapper">
+              <img
+                src={img1}
+                alt="clinic image"
+                className="explanation-images__image"
+              />
+            </div>
+            <div className="explanation-images__image-wrapper">
+              <img
+                src={img3}
+                alt="clinic image"
+                className="explanation-images__image"
+              />
+            </div>
+          </div>
+          <div className="explanation-list-wrapper">
+            <Heading level={2} text={translate('homePage.explanation.title')} />
+            <ul className="explanation__list">
+              <li className="explanation-list__item">
+                <span className="explanation-list-item__number">
+                  {translate('homePage.explanation.list.option1.number')}
+                </span>
+                <div className="explanation-list-item__text">
+                  <h3 className="explanation-list-item-text__title">
+                    {translate('homePage.explanation.list.option1.title')}
+                  </h3>
+                  <p className="explanation-list-item-text__description">
+                    {translate('homePage.explanation.list.option1.description')}
+                  </p>
+                </div>
+              </li>
+              <li className="explanation-list__item">
+                <span className="explanation-list-item__number">
+                  {translate('homePage.explanation.list.option2.number')}
+                </span>
+                <div className="explanation-list-item__text">
+                  <h3 className="explanation-list-item-text__title">
+                    {translate('homePage.explanation.list.option2.title')}
+                  </h3>
+                  <p className="explanation-list-item-text__description">
+                    {translate('homePage.explanation.list.option2.description')}
+                  </p>
+                </div>
+              </li>
+              <li className="explanation-list__item">
+                <span className="explanation-list-item__number">
+                  {translate('homePage.explanation.list.option3.number')}
+                </span>
+                <div className="explanation-list-item__text">
+                  <h3 className="explanation-list-item-text__title">
+                    {translate('homePage.explanation.list.option3.title')}
+                  </h3>
+                  <p className="explanation-list-item-text__description">
+                    {translate('homePage.explanation.list.option3.description')}
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <Services />
       <MapSection />
-      {/* <section className="map-section">
-        <div className="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3125171.733651879!2d25.9160012!3d50.4193434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf88432cf7b7%3A0x9ccd32f19846e611!2sNiskhodovskiy%20Clinic!5e1!3m2!1sru!2sua!4v1731793663259!5m2!1sru!2sua"
-            // width="600"
-            // height="450"
-            className="map__iframe"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div className="container contacts-container">
-          <Contacts />
-        </div>
-      </section> */}
-      {/*  Hero section*/}
-      {/*  ReasonsToContact section*/}
-      {/*  Services section global*/}
-      {/*  Contacts section global*/}
     </main>
   )
 }

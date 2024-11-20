@@ -24,3 +24,8 @@
     padding: 20px 10px;
   }
 }
+@media (max-width: 575px) {
+  .prices-accordion {
+    padding: 20px 0px;
+  }
+}

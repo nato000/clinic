@@ -1,5 +1,3 @@
-/* Accordion.css */
-
 .custom-accordion-container {
   margin: 16px;
 }
@@ -17,18 +15,38 @@
 }
 
 .custom-accordion-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   background-color: rgb(var(--color-white));
   padding: 16px;
   border-bottom: 1px solid rgba(var(--color-primary), 0.5);
 }
 
+.custom-accordion-category {
+}
+
+.custom-accordion-category-title {
+  background-color: rgb(var(--color-primary));
+  color: rgb(var(--color-white));
+  font-weight: 800;
+  padding: 3px 15px;
+}
+
 .custom-accordion-item {
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
   gap: 15px;
   padding: 10px 5px;
   border-bottom: 1px solid rgba(var(--color-secondary), 0.2);
+}
+
+.custom-accordion-item-title {
+  font-size: 20px !important;
+}
+.custom-accordion-item-value {
+  font-size: 18px !important;
 }
 
 .custom-accordion-value {
@@ -54,21 +72,24 @@
     margin: 16px 0;
   }
   .custom-accordion-value-title {
-    /* max-width: 150px; */
     font-size: 14px;
     grid-column: span 2;
     grid-row-start: 1;
   }
-  /* .custom-accordion-value {
-    grid-column: 1;
+}
+@media (max-width: 575px) {
+  .custom-accordion-item-title {
+    font-size: 16px !important;
   }
-  .custom-accordion-value-price {
-    grid-column: 1;
-  } */
+  .custom-accordion-item-value {
+    min-width: 69px;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 475px) {
   .custom-accordion-item {
-    display: grid;
-    grid-template-columns: 75% 20%;
-    row-gap: 20px;
-    column-gap: 5px;
+    gap: 5px;
+    align-items: center;
   }
 }

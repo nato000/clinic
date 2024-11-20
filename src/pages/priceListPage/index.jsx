@@ -3,6 +3,7 @@ import CustomAccordion from '../../shared/widgets/accordion/ui/accordion'
 import Contacts from '../../shared/widgets/contacts/ui/contacts'
 import Heading from '../../shared/widgets/heading/ui/heading'
 import MapSection from '../../shared/widgets/mapSection/ui/mapSection'
+import ScrollToTop from '../../shared/widgets/scrollToTop/scrollToTop'
 import Services from '../../shared/widgets/services/ui/services'
 import './style.css'
 
@@ -10,26 +11,28 @@ const PriceListPage = () => {
   const accordionData = translate('priceListPage.accordion')
 
   return (
-    <main className="main-content">
-      <section className="prices">
-        <div className="prices-wrapper">
-          <div className="container prices-container">
-            <Heading
-              level={2}
-              text={translate('priceListPage.title')}
-              style={{ color: 'white' }}
-            />
+    <>
+      <main className="main-content">
+        <section className="prices">
+          <div className="prices-wrapper">
+            <div className="container prices-container">
+              <Heading
+                level={2}
+                text={translate('priceListPage.title')}
+                style={{ color: 'white' }}
+              />
+            </div>
           </div>
-        </div>
-        <div className="container">
-          <div className="prices-accordion">
-            <CustomAccordion panels={accordionData} />
+          <div className="container">
+            <div className="prices-accordion">
+              <CustomAccordion panels={accordionData} />
+            </div>
           </div>
-        </div>
-      </section>
-      <Services />
-      <MapSection />
-    </main>
+        </section>
+        <Services />
+        <MapSection />
+      </main>
+    </>
   )
 }
 

@@ -7,10 +7,12 @@ import ContractPage from '../../pages/contractPage'
 import CooperationPage from '../../pages/cooperationPage'
 import ServicesMainPage from '../../pages/servicesMainPage'
 import ServicesPage from '../../pages/servicesPage'
+import ScrollToTop from '../../shared/widgets/scrollToTop/scrollToTop'
 
 export default function AppRouter() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

@@ -41,9 +41,15 @@
   transition: all linear 0.3s;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .dropdown-menu-list-item-link {
     font-size: 18px;
     line-height: 18px;
+  }
+}
+
+@media (max-height: 700px) {
+  .dropdown-menu-list-item-link {
+    padding: 7px 10px;
   }
 }

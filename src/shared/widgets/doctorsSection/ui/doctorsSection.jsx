@@ -4,6 +4,39 @@ import './doctorsSection.css'
 import emptyImage from '../../../assets/icons/no-image.svg'
 import Heading from '../../heading/ui/heading'
 
+// {
+//             id: "0",
+//             name: "Роман",
+//             surname: "Нісходовський",
+//             fatherName: "",
+//             position: "лікар",
+//             image: "./media/img_doctor_niskhodovski.jpg"
+//         },
+//         {
+//             id: "1",
+//             name: "Денис",
+//             surname: "Урос",
+//             fatherName: "",
+//             position: "лікар",
+//             image: "./media/img_doctor_uros.jpg"
+//         },
+//         {
+//             id: "2",
+//             name: "Аріна",
+//             surname: "Ломова",
+//             fatherName: "",
+//             position: "лікар",
+//             image: "./media/img_doctor_lomova.jpg"
+//         },
+//         {
+//             id: "3",
+//             name: "Володимир",
+//             surname: "Береговий",
+//             fatherName: "",
+//             position: "лікар",
+//             image: "./media/img_doctor_beregoviy.jpg"
+//         },
+
 export const DoctorsSection = () => {
   const doctorsData = translate('doctorsSection.doctors')
 

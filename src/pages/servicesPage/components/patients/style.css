@@ -3,7 +3,8 @@
 }
 
 .images-wrapper .images-container {
-  width: 50%;
+  display: flex;
+  width: 33%;
   padding: 16px 16px 16px 0;
 }
 
