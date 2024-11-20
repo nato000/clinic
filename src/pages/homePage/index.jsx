@@ -42,6 +42,7 @@ export const HomePage = () => {
       <HeroSection
         title={translate('homePage.hero.title')}
         description={translate('homePage.hero.description')}
+        sectionClass="home-page-hero"
       >
         <AppointmentBtn />
         <AppButton text={'Ціна'} onClick={handleHeroBtn} />

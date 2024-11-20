@@ -1,3 +1,7 @@
+.home-page-hero {
+  background-image: url('../../shared/assets/images/P1010644.jpg') !important;
+}
+
 .explanation {
   margin: 50px 0 100px 0;
   position: relative;

@@ -3,10 +3,10 @@ import './heroSection.css'
 import { translate } from '../../../utils/translator'
 import AppointmentBtn from '../../appointment/ui/appointmentBtn'
 
-export const HeroSection = ({ title, description, children }) => {
+export const HeroSection = ({ title, description, children, sectionClass }) => {
   return (
     <>
-      <section className="hero">
+      <section className={`hero ${sectionClass ? sectionClass : ''}`}>
         <div className="hero-shading">
           <div className="container">
             <h1 className="hero__title">
@@ -28,6 +28,7 @@ export const HeroSection = ({ title, description, children }) => {
 HeroSection.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  sectionClass: PropTypes.string,
   children: PropTypes.node,
 }
 

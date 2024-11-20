@@ -112,6 +112,7 @@ const ServicesPage = () => {
             <HeroSection
               title={translate(`servicesPage.${currentService.title}.title`)}
               // description={translate('homePage.hero.description')}
+              sectionClass={`hero-background--${currentService.title}`}
             >
               <AppointmentBtn />
             </HeroSection>
