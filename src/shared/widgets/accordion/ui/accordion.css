@@ -36,15 +36,26 @@
 .custom-accordion-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+  align-items: start;
+  flex-direction: column;
   padding: 10px 5px;
   border-bottom: 1px solid rgba(var(--color-secondary), 0.2);
 }
 
 .custom-accordion-item-title {
   font-size: 20px !important;
+  margin-bottom: 15px !important;
 }
+
+.custom-accordion-item-wrapped {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  white-space: break-spaces;
+  align-items: center;
+  color: rgb(var(--color-primary));
+}
+
 .custom-accordion-item-value {
   font-size: 18px !important;
 }
