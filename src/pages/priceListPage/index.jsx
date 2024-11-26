@@ -1,15 +1,13 @@
 import { translate } from '../../shared/utils/translator'
 import CustomAccordion from '../../shared/widgets/accordion/ui/accordion'
-import Contacts from '../../shared/widgets/contacts/ui/contacts'
 import Heading from '../../shared/widgets/heading/ui/heading'
 import MapSection from '../../shared/widgets/mapSection/ui/mapSection'
-import ScrollToTop from '../../shared/widgets/scrollToTop/scrollToTop'
 import Services from '../../shared/widgets/services/ui/services'
 import './style.css'
 
 const PriceListPage = () => {
   const accordionData = translate('priceListPage.accordion')
-
+  console.log("AccordionData", accordionData);
   return (
     <>
       <main className="main-content">
