@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 const useTelegramHook = () => {
   // Get Env variables
-  const botToken = process.env.REACT_APP_BOT_TOKEN;
-  const chatId = process.env.REACT_APP_CHAT_ID;
+  const botToken = import.meta.env.VITE_BOT_TOKEN;
+  const chatId = import.meta.env.VITE_CHAT_ID;
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
