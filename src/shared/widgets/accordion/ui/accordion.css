@@ -4,7 +4,7 @@
 
 .custom-accordion {
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .custom-accordion-summary {
@@ -93,7 +93,7 @@
     font-size: 16px !important;
   }
   .custom-accordion-item-value {
-    min-width: 69px;
+    min-width: 80px;
     font-size: 14px !important;
   }
 }
