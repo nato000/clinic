@@ -50,13 +50,18 @@
 .custom-accordion-item-wrapped {
   width: 100%;
   display: flex;
+  gap: 10px;
   justify-content: space-between;
   white-space: break-spaces;
   align-items: center;
   color: rgb(var(--color-primary));
 }
 
-.custom-accordion-item-value {
+.custom-accordion-item-wrapped-title {
+  border-bottom: 1px solid rgb(var(--color-primary));
+}
+
+.custom-accordion-item-wrapped-value {
   font-size: 18px !important;
 }
 
@@ -92,7 +97,7 @@
   .custom-accordion-item-title {
     font-size: 16px !important;
   }
-  .custom-accordion-item-value {
+  .custom-accordion-item-wrapped-value {
     min-width: 80px;
     font-size: 14px !important;
   }
