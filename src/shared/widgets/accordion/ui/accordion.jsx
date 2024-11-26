@@ -102,10 +102,10 @@ const CustomAccordion = ({ panels }) => {
                               className="custom-accordion-item-wrapped"
                               key={itemIndex}
                             >
-                              <Typography className="custom-accordion-item-value">
+                              <Typography className="custom-accordion-item-wrapped-title">
                                 {item.description}
                               </Typography>
-                              <Typography className="custom-accordion-item-value">
+                              <Typography className="custom-accordion-item-wrapped-value">
                                 {item.value}
                               </Typography>
                             </div>
