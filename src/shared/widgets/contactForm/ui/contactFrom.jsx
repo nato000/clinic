@@ -42,11 +42,11 @@ export const ContactForm = ({ onSubmitSuccess, formStyle }) => {
     setPhone(value)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     if (!nameError && !phoneError && name && phone) {
-      sendMessage(`${name} ${phone} залишив заявку через сайт`)
+      await sendMessage(`${name} ${phone} залишив заявку через сайт`)
       setIsSubmitted(true)
 
       // Notify parent component if needed
