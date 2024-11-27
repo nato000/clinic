@@ -73,7 +73,7 @@ export const ContactForm = ({ onSubmitSuccess, formStyle }) => {
               type="text"
               id="name"
               value={name}
-              placeholder="Enter your name"
+              placeholder="Напишіть ваше ім`я"
               onChange={handleNameChange}
             />
             {nameError && <div className="error-message">{nameError}</div>}

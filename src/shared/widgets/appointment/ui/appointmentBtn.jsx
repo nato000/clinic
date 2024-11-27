@@ -30,7 +30,6 @@ export const AppointmentBtn = () => {
               &times;
             </button>
             <InputForm />
-            {/* Additional form elements can be added here */}
           </div>
         </div>
       )}

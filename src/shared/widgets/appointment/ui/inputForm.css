@@ -1,10 +1,9 @@
 .modal-container {
-  width: 400px;
   margin: 36px auto;
   text-align: center;
   padding: 20px;
   border: 1px solid #000;
-  border-radius: 0x;
+  border-radius: 0;
   background-color: #fff;
 }
 
