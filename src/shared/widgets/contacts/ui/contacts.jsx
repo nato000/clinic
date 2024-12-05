@@ -58,14 +58,14 @@ export const Contacts = () => {
         <footer className="contacts__footer">
           <AppointmentBtn />
           <div className="contacts-footer__links">
-            <a href="" className="contacts-footer-links__link">
+            <a href={`${translate('contacts.adress.tg')}`} className="contacts-footer-links__link">
               <img
                 src={tgIcon}
                 alt="tgIcon"
                 className="contacts-footer-links-link__icon"
               />
             </a>
-            <a href="" className="contacts-footer-links__link">
+            <a href={`${translate('contacts.adress.inst')}`} className="contacts-footer-links__link">
               <img
                 src={instIcon}
                 alt="instIcon"
