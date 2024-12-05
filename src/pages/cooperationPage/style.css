@@ -2,7 +2,7 @@
 }
 
 .cooperatio-hero {
-  height: calc(100vh - var(--app-hero-section-height));
+  min-height: calc(100vh - var(--app-hero-section-height));
   background-color: rgb(var(--color-secondary));
 }
 

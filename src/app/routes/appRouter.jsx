@@ -8,6 +8,7 @@ import CooperationPage from '../../pages/cooperationPage'
 import ServicesMainPage from '../../pages/servicesMainPage'
 import ServicesPage from '../../pages/servicesPage'
 import ScrollToTop from '../../shared/widgets/scrollToTop/scrollToTop'
+import FounderPage from '../../pages/founderPage'
 
 export default function AppRouter() {
   return (
@@ -22,6 +23,7 @@ export default function AppRouter() {
           <Route path="pricelist" element={<PriceListPage />} />
           <Route path="contract" element={<ContractPage />} />
           <Route path="cooperation" element={<CooperationPage />} />
+          <Route path="founder" element={<FounderPage />} />
         </Route>
       </Routes>
     </Router>

@@ -12,6 +12,7 @@ export const Footer = () => {
               {translate('footer.copyrighting')}
             </p>
             <p className="footer__offer">
+              <Link to="/founder">{translate('footer.offer.founder')}</Link>
               <Link to="/cooperation">
                 {translate('header.bottom.nav.option5')}
               </Link>
