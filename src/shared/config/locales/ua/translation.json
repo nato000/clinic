@@ -1036,6 +1036,170 @@
       }
     ]
   },
+  "founderPage": {
+    "hero": {
+      "title": "Засновник Роман Нісходовський",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo itaque mollitia laudantium optio corporis magni! Veritatis eligendi labore nam quibusdam amet expedita omnis? Iure quibusdam tempora porro exercitationem culpa ratione.",
+      "img": "P1052077"
+    },
+    "projects": {
+      "title": "Мої проєкти",
+      "projects": [
+        {
+          "title": "Клініка Нісходовського",
+          "description": "",
+          "img": "P1010712"
+        },
+        {
+          "title": "Успішний медик",
+          "description": "Курс для лікарів у медицині",
+          "img": "P1010712"
+        },
+        {
+          "title": "Telgram бот",
+          "description": "",
+          "img": "P1010712"
+        },
+        {
+          "title": "Технологічні розробки",
+          "description": "",
+          "img": "P1010712"
+        }
+      ]
+    },
+    "follow": {
+      "title": "Слідкуйте за мною в соц мережах",
+      "description": " ",
+      "img": "P1052076",
+      "socials": [
+        {
+          "url": "https://www.instagram.com/niskhodovskiy_clinic/",
+          "icon": "instagram-w",
+          "text": "inst"
+        },
+        {
+          "url": "https://t.me/NISKHODOVSKIY_CLINIC",
+          "icon": "telegram-w",
+          "text": "inst"
+        },
+        {
+          "url": "https://t.me/NISKHODOVSKIY_CLINIC",
+          "icon": "telegram-w",
+          "text": "inst"
+        },
+        {
+          "url": "https://t.me/NISKHODOVSKIY_CLINIC",
+          "icon": "telegram-w",
+          "text": "inst"
+        },
+        {
+          "url": "https://t.me/NISKHODOVSKIY_CLINIC",
+          "icon": "telegram-w",
+          "text": "inst"
+        },
+        {
+          "url": "https://t.me/NISKHODOVSKIY_CLINIC",
+          "icon": "telegram-w",
+          "text": "inst"
+        }
+      ]
+    },
+    "articles": {
+      "title": "Статті та відео зі мною",
+      "description": " ",
+      "media": [
+        {
+          "youtube": [
+            {
+              "url": "https://www.youtube.com/embed/0EtOFVDHCwY?si=JHlLPiJBWywJ-vb_"
+            },
+            {
+              "url": "https://www.youtube.com/embed/KJSkU3ZoR4E?si=VW0SSFDY_qRME0D_"
+            },
+            {
+              "url": "https://www.youtube.com/embed/la4PJFb_HD4?si=6Y0KZoPROKyFTSYh"
+            },
+            {
+              "url": "https://www.youtube.com/embed/fGLDVYtUQ_E?si=rHg7w8T-pxyks71Z"
+            },
+            {
+              "url": "https://www.youtube.com/embed/jokJfDZGVqw?si=00WILFIRq4QgRvTo"
+            },
+            {
+              "url": "https://www.youtube.com/embed/WO3l2gf43bY?si=VIFvDRDHLiocaVN5"
+            },
+            {
+              "url": "https://www.youtube.com/embed/v4WXPdinY_4?si=M0treTtixOh44f9n"
+            },
+            {
+              "url": "https://www.youtube.com/embed/xwEvgIzI304?si=gxA6EF6Fl4DLJsFb"
+            }
+          ]
+        },
+        {
+          "instagram": [
+            {
+              "url": "https://www.instagram.com/p/CaFURLiDIGv/embed/"
+            },
+            {
+              "url": "https://www.instagram.com/p/CW1DvQ_vAs0/embed/"
+            },
+            {
+              "url": "https://www.instagram.com/p/CWVB7xIAbDe/embed/"
+            },
+            {
+              "url": "https://www.instagram.com/p/CVpqOCeteVi/embed/"
+            },
+            {
+              "url": "https://www.instagram.com/p/CU1zkE_gpvn/embed/"
+            },
+            {
+              "url": "https://www.instagram.com/p/CFMqh4SnDR4/embed/"
+            }
+          ]
+        },
+        {
+          "other": [
+            {
+              "title": "Touch",
+              "url": "https://touch-magazine.eu/persons/touch-interview/roman-nishodovskij-ulybka-zalog-uspeha.html",
+              "img": ""
+            },
+            {
+              "title": "Star Brothers",
+              "url": "https://starbrothers.com.ua/roman-nishodovskij-zdorovye-zuby/",
+              "img": ""
+            },
+            {
+              "title": "Завидные невесты",
+              "url": "https://issuu.com/zavidnuenevestu/docs/zavidnue_nevestu_2019/52",
+              "img": "image_2024-12-04_22-34-47"
+            },
+            {
+              "title": "Контракти.юа",
+              "url": "https://m.kontrakty.ua/article/123361",
+              "img": ""
+            },
+            {
+              "title": "Bnub",
+              "url": "https://bhub.com.ua/irrigator-modnyj-i-effektivnyj-gadzhet/amp/",
+              "img": ""
+            },
+            {
+              "title": "Bnub",
+              "url": "https://bhub.com.ua/ispravlenie-prikusa-brekety-kapy-plastiny/amp/",
+              "img": ""
+            },
+            {
+              "title": "Mport",
+              "url": "https://mport.ua/amp-page/health-and-fitness/fitness/760617-kak-sohranit-zuby-belymi-sovety-stomatologa",
+              "img": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
   "services": {
     "title": "ПОСЛУГИ",
     "description": "NISKHODOVSKIY CLINIC - це про естетику та індивідуальність",
@@ -1175,6 +1339,7 @@
   "footer": {
     "copyrighting": "Copyright © 2024 | Dr. Niskhodovskiy. All Rights Reserved.",
     "offer": {
+      "founder": "Засновник",
       "publicOfferContract": "Публічний договір оферти"
     }
   }
