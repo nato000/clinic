@@ -1,0 +1,20 @@
+.youtube-media {
+  --initial-size: 17px;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Maintains a 16:9 aspect ratio */
+
+  /* max-width: calc(var(--initial-size) * 16); */
+  /* max-height: calc(var(--initial-size) * 9); */
+}
+
+@media (max-width: 1150px) {
+  .youtube-media {
+    --initial-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 650px) {
+}
+@media (max-width: 440px) {
+}

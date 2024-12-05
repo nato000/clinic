@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 580px;
-  height: calc(100vh - var(--app-hero-section-height));
+  min-height: calc(100vh - var(--app-hero-section-height));
   position: relative;
 }
 
