@@ -4,6 +4,9 @@
 .cooperatio-hero {
   min-height: calc(100vh - var(--app-hero-section-height));
   background-color: rgb(var(--color-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cooperatio-hero-container {
