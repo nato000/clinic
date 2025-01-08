@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
 import { translate } from '../../shared/utils/translator'
 import Heading from '../../shared/widgets/heading/ui/heading'

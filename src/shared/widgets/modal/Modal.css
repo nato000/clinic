@@ -1,0 +1,73 @@
+/* Modal background overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Modal container */
+.modal-container {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 500px;
+    max-height: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Image inside modal */
+.modal-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Fullscreen mode for mobile */
+@media (max-width: 768px) {
+    .modal-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .modal-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Animation for modal appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
