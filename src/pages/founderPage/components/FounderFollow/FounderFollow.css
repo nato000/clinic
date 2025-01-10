@@ -54,7 +54,6 @@
   width: var(--icon-size);
   height: var(--icon-size);
   display: block;
-  width: 100%;
 }
 
 .follow-links-list-item-link__text {

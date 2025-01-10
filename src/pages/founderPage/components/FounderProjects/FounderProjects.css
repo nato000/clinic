@@ -9,6 +9,7 @@
   position: relative;
   align-items: center;
   height: 100%;
+  gap: 20px;
 }
 
 .project-text-wrapper {
@@ -19,11 +20,15 @@
 }
 
 .project__title {
-  font-size: 45px;
-  line-height: 45px;
+  font-size: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  margin: 0;
 }
 
 .project__description {
+  font-size: 18px;
+  padding: 10px 0;
 }
 
 .project__image-wrapper {
