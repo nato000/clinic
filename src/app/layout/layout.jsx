@@ -21,7 +21,7 @@ export const Layout = () => {
     <>
       <Modal
         isOpen={isModalOpen}
-        imageSrc="https://vuzolltelegramenvironment.top/media/IMG_1067.PNG"
+        imageSrc="https://niskhodovski-clinic.online/media/IMG_2119.mp4"
         onClose={toggleModal}
       />
       <div className="layout-wrapper">
