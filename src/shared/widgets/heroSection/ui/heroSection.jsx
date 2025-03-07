@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 import './heroSection.css'
-import { translate } from '../../../utils/translator'
-import AppointmentBtn from '../../appointment/ui/appointmentBtn'
 
 export const HeroSection = ({ title, description, children, sectionClass }) => {
   return (
