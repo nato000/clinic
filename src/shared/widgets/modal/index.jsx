@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Modal.css";
 
 const Modal = ({ isOpen, imageSrc, onClose }) => {
@@ -17,10 +17,10 @@ const Modal = ({ isOpen, imageSrc, onClose }) => {
         <button className="close-button" onClick={onClose}>
           &times;
         </button>
-        <video className="modal-image" autoPlay muted loop>
-          <source src={imageSrc} type="video/mp4" />
-        </video>
-        {/*<img src={imageSrc} alt="Modal Content" className="modal-image" />*/}
+        {/*<video className="modal-image" autoPlay muted loop>*/}
+        {/*  <source src={imageSrc} type="video/mp4" />*/}
+        {/*</video>*/}
+        <img src={imageSrc} alt="Modal Content" className="modal-image" />
       </div>
     </div>
   );

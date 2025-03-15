@@ -4,7 +4,7 @@ import { Footer } from '../../shared/widgets/footer'
 import './layout.css'
 import Modal from '../../shared/widgets/modal/index.jsx'
 import React, { useEffect, useState } from 'react'
-
+import Image from "../../shared/assets/images/IMG_3648.webp"
 export const Layout = () => {
 
   const [isModalOpen, setModalOpen] = useState(false);
@@ -19,11 +19,11 @@ export const Layout = () => {
 
   return (
     <>
-      {/*<Modal*/}
-      {/*  isOpen={isModalOpen}*/}
-      {/*  imageSrc="https://niskhodovski-clinic.online/media/IMG_2119.mp4"*/}
-      {/*  onClose={toggleModal}*/}
-      {/*/>*/}
+      <Modal
+        isOpen={isModalOpen}
+        imageSrc={Image}
+        onClose={toggleModal}
+      />
       <div className="layout-wrapper">
         <Header />
         <div className="main-wrapper">
